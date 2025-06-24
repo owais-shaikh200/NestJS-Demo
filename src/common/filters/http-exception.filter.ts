@@ -23,7 +23,6 @@ export class AllExceptionsFilter implements ExceptionFilter {
       message = exception.getResponse();
     }
 
-    // ✅ Handle Prisma known request errors
     if (exception instanceof PrismaClientKnownRequestError) {
       switch (exception.code) {
         case 'P2002': {

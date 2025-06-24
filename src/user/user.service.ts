@@ -5,12 +5,11 @@ import { PrismaService } from '../prisma/prisma.service';
 export class UserService {
   constructor(private prisma: PrismaService) {}
 
-  // ✅ We intentionally do NOT expose create user here
-  // Let AuthService handle user creation (signup)
-
   findAll() {
     return this.prisma.user.findMany({
-      select: { id: true, email: true, name: true, createdAt: true },
+      select: { id: true, email: true, name: true, 
+        role: true,
+        createdAt: true },
     });
   }
 
