@@ -13,14 +13,14 @@ export class UserService {
     });
   }
 
-  findOne(id: number) {
+  findOne(id: string) {
     return this.prisma.user.findUnique({
       where: { id },
       select: { id: true, email: true, name: true, createdAt: true },
     });
   }
 
-  update(id: number, data: Partial<{ name: string }>) {
+  update(id: string, data: Partial<{ name: string }>) {
     return this.prisma.user.update({
       where: { id },
       data,
@@ -28,7 +28,7 @@ export class UserService {
     });
   }
 
-  remove(id: number) {
+  remove(id: string) {
     return this.prisma.user.delete({
       where: { id },
     });

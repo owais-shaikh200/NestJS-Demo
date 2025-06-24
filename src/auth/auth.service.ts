@@ -29,7 +29,6 @@ export class AuthService {
       data: {
         email: dto.email,
         name: dto.name,
-        // role: (dto.role?.toUpperCase() as Role) || Role.USER,
         role: dto.role || Role.USER,
         password: hashedPassword,
       },
