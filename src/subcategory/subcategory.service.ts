@@ -2,6 +2,7 @@ import { Injectable, NotFoundException } from '@nestjs/common';
 import { PrismaService } from '../prisma/prisma.service';
 import { CreateSubcategoryDto } from './dto/create-subcategory.dto';
 import { UpdateSubcategoryDto } from './dto/update-subcategory.dto';
+import { ForbiddenException } from '@nestjs/common';
 
 @Injectable()
 export class SubcategoryService {
@@ -21,15 +22,27 @@ export class SubcategoryService {
     });
   }
 
-  async findAll() {
-    return this.prisma.subcategory.findMany({
-      include: {
-        category: true,
-        createdBy: true,
-      },
+  async findAll(page: number, limit: number, skip: number, take: number) {
+  const [subcategories, total] = await Promise.all([
+    this.prisma.subcategory.findMany({
+      include: { category: true, createdBy: true },
       orderBy: { createdAt: 'desc' },
-    });
-  }
+      skip,
+      take,
+    }),
+    this.prisma.subcategory.count(),
+  ]);
+
+  return {
+    data: subcategories,
+    meta: {
+      total,
+      page,
+      lastPage: Math.ceil(total / limit),
+    },
+  };
+}
+
 
   async findOne(id: string) {
     const subcategory = await this.prisma.subcategory.findUnique({
@@ -43,8 +56,12 @@ export class SubcategoryService {
     return subcategory;
   }
 
-  async update(id: string, dto: UpdateSubcategoryDto) {
-    await this.findOne(id);
+  async update(id: string, dto: UpdateSubcategoryDto, userId: string, role: string) {
+    const subcategory = await this.findOne(id);
+
+    if (subcategory.createdById !== userId && role !== 'ADMIN') {
+      throw new ForbiddenException('You are not allowed to update this subcategory');
+    }
 
     if (dto.categoryId) {
       const category = await this.prisma.category.findUnique({
@@ -59,8 +76,13 @@ export class SubcategoryService {
     });
   }
 
-  async remove(id: string) {
-    await this.findOne(id);
+  async remove(id: string, userId: string, role: string) {
+    const product = await this.findOne(id);
+
+    if (product.createdById !== userId && role !== 'ADMIN') {
+      throw new ForbiddenException('You are not allowed to delete this subcategory');
+    }
+
     return this.prisma.subcategory.delete({ where: { id } });
   }
 }

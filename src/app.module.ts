@@ -9,6 +9,8 @@ import { LoggerMiddleware } from './common/middlewares/logger.middleware';
 import { CategoryModule } from './category/category.module';
 import { SubcategoryModule } from './subcategory/subcategory.module';
 import { ProductModule } from './product/product.module';
+import { CartModule } from './cart/cart.module';
+import { OrderModule } from './order/order.module';
 
 @Module({
   imports: 
@@ -21,7 +23,9 @@ import { ProductModule } from './product/product.module';
     AuthModule,
     CategoryModule,
     SubcategoryModule,
-    ProductModule
+    ProductModule,
+    CartModule,
+    OrderModule
   ],
   controllers: [AppController],
   providers: [AppService],

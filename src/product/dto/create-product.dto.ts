@@ -7,6 +7,7 @@ import {
   IsString,
   IsUUID,
 } from 'class-validator';
+import { Type } from 'class-transformer';
 
 export class CreateProductDto {
   @IsString()
@@ -19,15 +20,18 @@ export class CreateProductDto {
 
   @IsNumber()
   @IsPositive()
+  @Type(() => Number) // ensures string from FormData is converted
   price: number;
 
   @IsNumber()
   @IsPositive()
+  @Type(() => Number)
   stock: number;
 
+  @IsOptional()
   @IsArray()
   @IsString({ each: true })
-  imageUrls: string[];
+  imageUrls?: string[]; // Optional since uploaded and added server-side
 
   @IsUUID()
   subcategoryId: string;

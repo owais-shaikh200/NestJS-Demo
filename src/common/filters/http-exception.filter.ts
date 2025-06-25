@@ -4,12 +4,15 @@ import {
   ArgumentsHost,
   HttpException,
   HttpStatus,
+  Logger,
 } from '@nestjs/common';
 import { Request, Response } from 'express';
 import { PrismaClientKnownRequestError } from '@prisma/client/runtime/library';
 
 @Catch()
 export class AllExceptionsFilter implements ExceptionFilter {
+  private readonly logger = new Logger(AllExceptionsFilter.name);
+
   catch(exception: unknown, host: ArgumentsHost) {
     const ctx = host.switchToHttp();
     const response = ctx.getResponse<Response>();
@@ -43,6 +46,11 @@ export class AllExceptionsFilter implements ExceptionFilter {
           message = `Prisma error: ${exception.code}`;
       }
     }
+    
+    this.logger.error(
+      `${request.method} ${request.url}`,
+      (exception as any).stack || String(exception),
+    );
 
     response.status(status).json({
       statusCode: status,
