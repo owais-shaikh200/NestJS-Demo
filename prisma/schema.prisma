@@ -25,6 +25,7 @@ model User {
   cart          Cart?
   Order         Order[]
   Address       Address[]
+  SupportChat   SupportChat[]
 }
 
 enum Role {
@@ -178,4 +179,23 @@ model Coupon {
   updatedAt  DateTime @updatedAt
 
   orders Order[] // Relation to orders that used this coupon
+}
+
+model SupportChat {
+  id        String    @id @default(uuid())
+  userId    String
+  user      User      @relation(fields: [userId], references: [id])
+  messages  Message[]
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+}
+
+model Message {
+  id        String      @id @default(uuid())
+  chatId    String
+  chat      SupportChat @relation(fields: [chatId], references: [id])
+  senderId  String // user or admin
+  content   String
+  isRead    Boolean     @default(false)
+  createdAt DateTime    @default(now())
 }

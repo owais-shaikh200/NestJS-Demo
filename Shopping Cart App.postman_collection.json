@@ -1,0 +1,4398 @@
+{
+	"info": {
+		"_postman_id": "31a0cd04-1c58-4fbb-9408-f7332d356104",
+		"name": "Shopping Cart App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "45923871",
+		"_collection_link": "https://owaisshaikh-2390655.postman.co/workspace/Owais-Shaikh's-Workspace~b320ac88-5504-4c11-8718-3ce78aa41b81/collection/45923871-31a0cd04-1c58-4fbb-9408-f7332d356104?action=share&source=collection_link&creator=45923871"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "getAllUsers",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/users",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "getAllUsers",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:3000/users",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"users"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "909"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"38d-7+TbmJs53k7VGoRrxQdANxGBSs0\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 24 Jun 2025 09:04:35 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"email\": \"john123@example.com\",\n        \"name\": \"John Doe\",\n        \"role\": \"ADMIN\",\n        \"createdAt\": \"2025-06-24T06:58:27.148Z\"\n    },\n    {\n        \"id\": 2,\n        \"email\": \"john12dfs3@example.com\",\n        \"name\": \"John ABC Doe\",\n        \"role\": \"USER\",\n        \"createdAt\": \"2025-06-24T07:42:45.700Z\"\n    },\n    {\n        \"id\": 3,\n        \"email\": \"john12dfdfwfs3@example.com\",\n        \"name\": \"John ABCDEF Doe\",\n        \"role\": \"ADMIN\",\n        \"createdAt\": \"2025-06-24T07:43:07.026Z\"\n    },\n    {\n        \"id\": 4,\n        \"email\": \"johnabc12dfdfwfs3@example.com\",\n        \"name\": \"John ABCDEF Doe\",\n        \"role\": \"ADMIN\",\n        \"createdAt\": \"2025-06-24T07:57:25.192Z\"\n    },\n    {\n        \"id\": 5,\n        \"email\": \"owais.shaikh@gmail.com\",\n        \"name\": \"Owais Shaikh\",\n        \"role\": \"USER\",\n        \"createdAt\": \"2025-06-24T08:00:32.887Z\"\n    },\n    {\n        \"id\": 6,\n        \"email\": \"muneeb@gmail.com\",\n        \"name\": \"Muneeb\",\n        \"role\": \"USER\",\n        \"createdAt\": \"2025-06-24T08:20:32.907Z\"\n    },\n    {\n        \"id\": 7,\n        \"email\": \"ammar@gmail.com\",\n        \"name\": \"Ammar\",\n        \"role\": \"ADMIN\",\n        \"createdAt\": \"2025-06-24T08:36:12.124Z\"\n    },\n    {\n        \"id\": 8,\n        \"email\": \"aqib@gmail.com\",\n        \"name\": \"Aqib\",\n        \"role\": \"USER\",\n        \"createdAt\": \"2025-06-24T09:01:36.159Z\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "deleteUser",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/users/2",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "deleteUser",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:3000/users/2",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"users",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "190"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"be-4VTslVxejjIt0s8DmsiURyOGAVU\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 24 Jun 2025 09:06:16 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 2,\n    \"email\": \"john12dfs3@example.com\",\n    \"name\": \"John ABC Doe\",\n    \"password\": \"$2b$10$i01ne1a8W5YTLpDbhxWnyuUrsZy29VeJAIAw6JH2XZTji0HH5.y5W\",\n    \"role\": \"USER\",\n    \"createdAt\": \"2025-06-24T07:42:45.700Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "updateUser",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"updateuseragain@example.com\",\r\n    \"name\": \"Updated Test User again\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/users/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "updateUser",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"updateuseragain@example.com\",\r\n    \"name\": \"Updated Test User again\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/users/1",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"users",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "118"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"76-Yrto9cvU4hqFeVEuG+XY+Miwyi0\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 24 Jun 2025 09:07:20 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"email\": \"updateuseragain@example.com\",\n    \"name\": \"Updated Test User again\",\n    \"createdAt\": \"2025-06-24T06:58:27.148Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "getUserById",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/users/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "getUserById",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:3000/users/1",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"users",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "118"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"76-Yrto9cvU4hqFeVEuG+XY+Miwyi0\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 24 Jun 2025 09:08:04 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"email\": \"updateuseragain@example.com\",\n    \"name\": \"Updated Test User again\",\n    \"createdAt\": \"2025-06-24T06:58:27.148Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Admin Only",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/users/admin-only",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"admin-only"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Admin Only",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:3000/users/admin-only",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"users",
+										"admin-only"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "26"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1a-VHGchXwvX5wJ93Gz0M0Mr29lChY\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 24 Jun 2025 07:58:42 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Hello Admin!\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"user2@example.com\",\r\n  \"password\": \"password123\",\r\n  \"name\": \"John Doe\",\r\n  \"role\": \"USER\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/auth/signup",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "adminRegistration",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\": \"user1@example.com\",\r\n  \"password\": \"password123\",\r\n  \"name\": \"John Doe\",\r\n  \"role\": \"ADMIN\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/auth/signup",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"auth",
+										"signup"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "145"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"91-4DQIPovEaEo8gnY3yqwVmCnbi98\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 26 Jun 2025 11:19:46 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"6f27925e-0795-496a-870d-e99650d1aec9\",\n    \"email\": \"user1@example.com\",\n    \"name\": \"John Doe\",\n    \"role\": \"ADMIN\",\n    \"createdAt\": \"2025-06-26T11:19:46.135Z\"\n}"
+						},
+						{
+							"name": "userRegistration",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\": \"user2@example.com\",\r\n  \"password\": \"password123\",\r\n  \"name\": \"John Doe\",\r\n  \"role\": \"USER\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/auth/signup",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"auth",
+										"signup"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "144"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"90-Zu99rr4RmNI7hDmHr+YeM4xz960\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 26 Jun 2025 12:41:39 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"f85851bd-22b8-4842-b0f3-cea27390f58e\",\n    \"email\": \"user2@example.com\",\n    \"name\": \"John Doe\",\n    \"role\": \"USER\",\n    \"createdAt\": \"2025-06-26T12:41:39.002Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"user2@example.com\",\r\n  \"password\": \"password123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/auth/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "adminLogin",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\": \"user1@example.com\",\r\n  \"password\": \"password123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/auth/login",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "378"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"17a-G+onoxq6yMIaN7AK12PnATnflm4\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 26 Jun 2025 11:20:20 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"access_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2ZjI3OTI1ZS0wNzk1LTQ5NmEtODcwZC1lOTk2NTBkMWFlYzkiLCJlbWFpbCI6InVzZXIxQGV4YW1wbGUuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzUwOTM2ODIwLCJleHAiOjE3NTEwMjMyMjB9.37fNtUQv1Z-o2B3_iQPen313wwROG10sSUcPEodc-YE\",\n    \"user\": {\n        \"id\": \"6f27925e-0795-496a-870d-e99650d1aec9\",\n        \"email\": \"user1@example.com\",\n        \"name\": \"John Doe\",\n        \"role\": \"ADMIN\"\n    }\n}"
+						},
+						{
+							"name": "userLogin",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\": \"user2@example.com\",\r\n  \"password\": \"password123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/auth/login",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "376"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"178-w2gb6f3kcwD9i5nizIjB1C37PS8\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 26 Jun 2025 12:43:15 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"access_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmODU4NTFiZC0yMmI4LTQ4NDItYjBmMy1jZWEyNzM5MGY1OGUiLCJlbWFpbCI6InVzZXIyQGV4YW1wbGUuY29tIiwicm9sZSI6IlVTRVIiLCJpYXQiOjE3NTA5NDE3OTUsImV4cCI6MTc1MTAyODE5NX0.2JaLlerdw7lNaJ5l868V0ukBrz5F7ylzoXWnZ61B6Y4\",\n    \"user\": {\n        \"id\": \"f85851bd-22b8-4842-b0f3-cea27390f58e\",\n        \"email\": \"user2@example.com\",\n        \"name\": \"John Doe\",\n        \"role\": \"USER\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "getCurrentUser",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/auth/me",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"me"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "getCurrentUser",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:3000/auth/me",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"auth",
+										"me"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "91"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"5b-cqVLMPxgIgNus3jP2FpBb6/KN/A\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 25 Jun 2025 11:11:36 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"userId\": \"7cdf775c-9230-4a92-90d5-7b96c733b4eb\",\n    \"email\": \"user@example.com\",\n    \"role\": \"ADMIN\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Categories",
+			"item": [
+				{
+					"name": "createCategory",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Electronics\",\r\n  \"description\": \"All kinds of gadgets\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/categories",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"categories"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "createCategory",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"Electronics\",\r\n  \"description\": \"All kinds of gadgets\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/categories",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"categories"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "234"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"ea-YGA2KBtnsLrsxrk7SouWe6AQh8M\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 25 Jun 2025 11:58:36 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"b669e03e-8abb-41b6-b134-db2d8fd3b321\",\n    \"name\": \"Electronics\",\n    \"description\": \"All kinds of gadgets\",\n    \"createdById\": \"7cdf775c-9230-4a92-90d5-7b96c733b4eb\",\n    \"createdAt\": \"2025-06-25T11:58:36.848Z\",\n    \"updatedAt\": \"2025-06-25T11:58:36.848Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "deleteCategory",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Electronics\",\r\n  \"description\": \"All kinds of gadgets\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/categories/{{Category_ID}}",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"categories",
+								"{{Category_ID}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "deleteCategory",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"Electronics\",\r\n  \"description\": \"All kinds of gadgets\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/categories/{{Category_ID}}",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"categories",
+										"{{Category_ID}}"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"ee-eCGRmb7Ox3eJ8KTJAT13EdIGnqQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 25 Jun 2025 11:58:09 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "updateCategory",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"New Electronics\",\r\n  \"description\": \"All kinds of gadgets\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/categories/{{Category_ID}}",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"categories",
+								"{{Category_ID}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "updateCategory",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"New Electronics\",\r\n  \"description\": \"All kinds of gadgets\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/categories/{{Category_ID}}",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"categories",
+										"{{Category_ID}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "238"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"ee-eCGRmb7Ox3eJ8KTJAT13EdIGnqQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 25 Jun 2025 11:53:54 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"7fd9ee36-7655-4a75-8ba6-9d8e67b67179\",\n    \"name\": \"New Electronics\",\n    \"description\": \"All kinds of gadgets\",\n    \"createdById\": \"7cdf775c-9230-4a92-90d5-7b96c733b4eb\",\n    \"createdAt\": \"2025-06-25T11:51:22.590Z\",\n    \"updatedAt\": \"2025-06-25T11:53:54.271Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "getAllCategories",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/categories",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"categories"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "getAllCategories",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:3000/categories",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"categories"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "579"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"243-SV67YaV+klDVCUXf/zVXfZtjPgE\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 25 Jun 2025 11:55:03 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": \"7fd9ee36-7655-4a75-8ba6-9d8e67b67179\",\n            \"name\": \"New Electronics\",\n            \"description\": \"All kinds of gadgets\",\n            \"createdById\": \"7cdf775c-9230-4a92-90d5-7b96c733b4eb\",\n            \"createdAt\": \"2025-06-25T11:51:22.590Z\",\n            \"updatedAt\": \"2025-06-25T11:53:54.271Z\",\n            \"subcategories\": [],\n            \"createdBy\": {\n                \"id\": \"7cdf775c-9230-4a92-90d5-7b96c733b4eb\",\n                \"email\": \"user@example.com\",\n                \"name\": \"John Doe\",\n                \"password\": \"$2b$10$W0w8/YEZciTszp7btqy.8OrBFlTh0H3b2rhJDxK6Th2dPphg3fCJS\",\n                \"role\": \"ADMIN\",\n                \"createdAt\": \"2025-06-25T11:10:13.729Z\",\n                \"updatedAt\": \"2025-06-25T11:10:13.729Z\"\n            }\n        }\n    ],\n    \"meta\": {\n        \"total\": 1,\n        \"page\": 1,\n        \"lastPage\": 1\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "getSingleCategory",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/categories/{{Category_ID}}",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"categories",
+								"{{Category_ID}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "getSingleCategory",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:3000/categories/{{Category_ID}}",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"categories",
+										"{{Category_ID}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "527"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"20f-owxa0qOyi8ywg+7LXudvNX/fdA0\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 25 Jun 2025 11:56:11 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"7fd9ee36-7655-4a75-8ba6-9d8e67b67179\",\n    \"name\": \"New Electronics\",\n    \"description\": \"All kinds of gadgets\",\n    \"createdById\": \"7cdf775c-9230-4a92-90d5-7b96c733b4eb\",\n    \"createdAt\": \"2025-06-25T11:51:22.590Z\",\n    \"updatedAt\": \"2025-06-25T11:53:54.271Z\",\n    \"subcategories\": [],\n    \"createdBy\": {\n        \"id\": \"7cdf775c-9230-4a92-90d5-7b96c733b4eb\",\n        \"email\": \"user@example.com\",\n        \"name\": \"John Doe\",\n        \"password\": \"$2b$10$W0w8/YEZciTszp7btqy.8OrBFlTh0H3b2rhJDxK6Th2dPphg3fCJS\",\n        \"role\": \"ADMIN\",\n        \"createdAt\": \"2025-06-25T11:10:13.729Z\",\n        \"updatedAt\": \"2025-06-25T11:10:13.729Z\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Sub-Categories",
+			"item": [
+				{
+					"name": "createSubCategory",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Laptops\",\r\n  \"description\": \"All laptops\",\r\n  \"categoryId\": \"b669e03e-8abb-41b6-b134-db2d8fd3b321\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/subcategories",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"subcategories"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "createSubCategory",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"Laptops\",\r\n  \"description\": \"All laptops\",\r\n  \"categoryId\": \"b669e03e-8abb-41b6-b134-db2d8fd3b321\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/subcategories",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"subcategories"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "273"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"111-wWFa11YWu+UM3jB9iYKFFOd2JQ8\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 25 Jun 2025 12:12:27 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"e9781798-caaa-45c0-a984-c64fa5c630e1\",\n    \"name\": \"Laptops\",\n    \"description\": \"All laptops\",\n    \"categoryId\": \"b669e03e-8abb-41b6-b134-db2d8fd3b321\",\n    \"createdById\": \"7cdf775c-9230-4a92-90d5-7b96c733b4eb\",\n    \"createdAt\": \"2025-06-25T12:12:27.332Z\",\n    \"updatedAt\": \"2025-06-25T12:12:27.332Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "getAllSubCategories",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/subcategories",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"subcategories"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "getAllSubCategories",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:3000/subcategories",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"subcategories"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1646"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"66e-nq7Mg5qF9qAGvp9Qt4Nu9hRe4lI\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 25 Jun 2025 12:06:35 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": \"35e651af-e03b-42f3-9984-9ab4e170b970\",\n            \"name\": \"Laptops\",\n            \"description\": \"All laptops\",\n            \"categoryId\": \"b669e03e-8abb-41b6-b134-db2d8fd3b321\",\n            \"createdById\": \"7cdf775c-9230-4a92-90d5-7b96c733b4eb\",\n            \"createdAt\": \"2025-06-25T12:04:32.193Z\",\n            \"updatedAt\": \"2025-06-25T12:04:32.193Z\",\n            \"category\": {\n                \"id\": \"b669e03e-8abb-41b6-b134-db2d8fd3b321\",\n                \"name\": \"Electronics\",\n                \"description\": \"All kinds of gadgets\",\n                \"createdById\": \"7cdf775c-9230-4a92-90d5-7b96c733b4eb\",\n                \"createdAt\": \"2025-06-25T11:58:36.848Z\",\n                \"updatedAt\": \"2025-06-25T11:58:36.848Z\"\n            },\n            \"createdBy\": {\n                \"id\": \"7cdf775c-9230-4a92-90d5-7b96c733b4eb\",\n                \"email\": \"user@example.com\",\n                \"name\": \"John Doe\",\n                \"password\": \"$2b$10$W0w8/YEZciTszp7btqy.8OrBFlTh0H3b2rhJDxK6Th2dPphg3fCJS\",\n                \"role\": \"ADMIN\",\n                \"createdAt\": \"2025-06-25T11:10:13.729Z\",\n                \"updatedAt\": \"2025-06-25T11:10:13.729Z\"\n            }\n        },\n        {\n            \"id\": \"7190edb9-bcf2-4448-be58-fc7711e986f5\",\n            \"name\": \"Smartphones\",\n            \"description\": \"All smartphone devices\",\n            \"categoryId\": \"b669e03e-8abb-41b6-b134-db2d8fd3b321\",\n            \"createdById\": \"7cdf775c-9230-4a92-90d5-7b96c733b4eb\",\n            \"createdAt\": \"2025-06-25T12:00:59.809Z\",\n            \"updatedAt\": \"2025-06-25T12:00:59.809Z\",\n            \"category\": {\n                \"id\": \"b669e03e-8abb-41b6-b134-db2d8fd3b321\",\n                \"name\": \"Electronics\",\n                \"description\": \"All kinds of gadgets\",\n                \"createdById\": \"7cdf775c-9230-4a92-90d5-7b96c733b4eb\",\n                \"createdAt\": \"2025-06-25T11:58:36.848Z\",\n                \"updatedAt\": \"2025-06-25T11:58:36.848Z\"\n            },\n            \"createdBy\": {\n                \"id\": \"7cdf775c-9230-4a92-90d5-7b96c733b4eb\",\n                \"email\": \"user@example.com\",\n                \"name\": \"John Doe\",\n                \"password\": \"$2b$10$W0w8/YEZciTszp7btqy.8OrBFlTh0H3b2rhJDxK6Th2dPphg3fCJS\",\n                \"role\": \"ADMIN\",\n                \"createdAt\": \"2025-06-25T11:10:13.729Z\",\n                \"updatedAt\": \"2025-06-25T11:10:13.729Z\"\n            }\n        }\n    ],\n    \"meta\": {\n        \"total\": 2,\n        \"page\": 1,\n        \"lastPage\": 1\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "getSingleSubCategory",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/subcategories/{{SubCategory_ID}}",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"subcategories",
+								"{{SubCategory_ID}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "getSingleSubCategory",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:3000/subcategories/{{SubCategory_ID}}",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"subcategories",
+										"{{SubCategory_ID}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "789"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"315-Mk9WikHxtBFqadbuhD45U6QznrQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 25 Jun 2025 12:08:35 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"35e651af-e03b-42f3-9984-9ab4e170b970\",\n    \"name\": \"Laptops\",\n    \"description\": \"All laptops\",\n    \"categoryId\": \"b669e03e-8abb-41b6-b134-db2d8fd3b321\",\n    \"createdById\": \"7cdf775c-9230-4a92-90d5-7b96c733b4eb\",\n    \"createdAt\": \"2025-06-25T12:04:32.193Z\",\n    \"updatedAt\": \"2025-06-25T12:04:32.193Z\",\n    \"category\": {\n        \"id\": \"b669e03e-8abb-41b6-b134-db2d8fd3b321\",\n        \"name\": \"Electronics\",\n        \"description\": \"All kinds of gadgets\",\n        \"createdById\": \"7cdf775c-9230-4a92-90d5-7b96c733b4eb\",\n        \"createdAt\": \"2025-06-25T11:58:36.848Z\",\n        \"updatedAt\": \"2025-06-25T11:58:36.848Z\"\n    },\n    \"createdBy\": {\n        \"id\": \"7cdf775c-9230-4a92-90d5-7b96c733b4eb\",\n        \"email\": \"user@example.com\",\n        \"name\": \"John Doe\",\n        \"password\": \"$2b$10$W0w8/YEZciTszp7btqy.8OrBFlTh0H3b2rhJDxK6Th2dPphg3fCJS\",\n        \"role\": \"ADMIN\",\n        \"createdAt\": \"2025-06-25T11:10:13.729Z\",\n        \"updatedAt\": \"2025-06-25T11:10:13.729Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "updateSubCategory",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Watches\",\r\n  \"description\": \"All Watches\",\r\n  \"categoryId\": \"b669e03e-8abb-41b6-b134-db2d8fd3b321\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/subcategories/{{SubCategory_ID}}",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"subcategories",
+								"{{SubCategory_ID}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "updateSubCategory",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"Watches\",\r\n  \"description\": \"All Watches\",\r\n  \"categoryId\": \"b669e03e-8abb-41b6-b134-db2d8fd3b321\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/subcategories/{{SubCategory_ID}}",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"subcategories",
+										"{{SubCategory_ID}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "273"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"111-rZu9oTzcFzBZUWAaEsSs8kwRLXI\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 25 Jun 2025 12:10:51 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"35e651af-e03b-42f3-9984-9ab4e170b970\",\n    \"name\": \"Watches\",\n    \"description\": \"All Watches\",\n    \"categoryId\": \"b669e03e-8abb-41b6-b134-db2d8fd3b321\",\n    \"createdById\": \"7cdf775c-9230-4a92-90d5-7b96c733b4eb\",\n    \"createdAt\": \"2025-06-25T12:04:32.193Z\",\n    \"updatedAt\": \"2025-06-25T12:10:51.852Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "deleteSubCategory",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/subcategories/{{SubCategory_ID}}",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"subcategories",
+								"{{SubCategory_ID}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "deleteSubCategory",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:3000/subcategories/{{SubCategory_ID}}",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"subcategories",
+										"{{SubCategory_ID}}"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"111-rZu9oTzcFzBZUWAaEsSs8kwRLXI\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 25 Jun 2025 12:11:46 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "createProduct",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "iPhone 18",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Latest Apple Flagship",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "1299",
+									"type": "text"
+								},
+								{
+									"key": "stock",
+									"value": "50",
+									"type": "text"
+								},
+								{
+									"key": "subcategoryId",
+									"value": "{{SubCategory_ID}}",
+									"type": "text"
+								},
+								{
+									"key": "images",
+									"type": "file",
+									"src": [
+										"/C:/Users/eSpark/Downloads/iphone 1.jpg",
+										"/C:/Users/eSpark/Downloads/iphone 2.jpg"
+									]
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/products",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "createProduct",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "iPhone 15",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "Latest Apple Flagship",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "1299",
+											"type": "text"
+										},
+										{
+											"key": "stock",
+											"value": "50",
+											"type": "text"
+										},
+										{
+											"key": "subcategoryId",
+											"value": "{{SubCategory_ID}}",
+											"type": "text"
+										},
+										{
+											"key": "images",
+											"type": "file",
+											"src": [
+												"/C:/Users/eSpark/Downloads/iphone 1.jpg",
+												"/C:/Users/eSpark/Downloads/iphone 2.jpg"
+											]
+										}
+									]
+								},
+								"url": {
+									"raw": "localhost:3000/products",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"products"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "529"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"211-bRBtj/ni9AP8vuoyEg6ltY3iAPQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 25 Jun 2025 14:21:35 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"5101f040-ff1b-407d-9b27-67119c2caa68\",\n    \"name\": \"iPhone 15\",\n    \"description\": \"Latest Apple Flagship\",\n    \"price\": 1299,\n    \"stock\": 50,\n    \"images\": [\n        \"https://res.cloudinary.com/drlvkewbn/image/upload/v1750861294/products/fxperp3tsthdkki616ln.jpg\",\n        \"https://res.cloudinary.com/drlvkewbn/image/upload/v1750861293/products/ofm0b97389fdtbpgdvcs.jpg\"\n    ],\n    \"subcategoryId\": \"e9781798-caaa-45c0-a984-c64fa5c630e1\",\n    \"sales\": 0,\n    \"createdById\": \"7cdf775c-9230-4a92-90d5-7b96c733b4eb\",\n    \"createdAt\": \"2025-06-25T14:21:35.489Z\",\n    \"updatedAt\": \"2025-06-25T14:21:35.489Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "updateProduct",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "iPhone 10",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Old Apple Flagship",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "899",
+									"type": "text"
+								},
+								{
+									"key": "stock",
+									"value": "25",
+									"type": "text"
+								},
+								{
+									"key": "subcategoryId",
+									"value": "{{SubCategory_ID}}",
+									"type": "text"
+								},
+								{
+									"key": "images",
+									"type": "file",
+									"src": "/C:/Users/eSpark/Downloads/iphone 1.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/products/{{Product_ID}}",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"products",
+								"{{Product_ID}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "updateProduct",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "iPhone 10",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "Old Apple Flagship",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "899",
+											"type": "text"
+										},
+										{
+											"key": "stock",
+											"value": "25",
+											"type": "text"
+										},
+										{
+											"key": "subcategoryId",
+											"value": "{{SubCategory_ID}}",
+											"type": "text"
+										},
+										{
+											"key": "images",
+											"type": "file",
+											"src": "/C:/Users/eSpark/Downloads/iphone 1.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "localhost:3000/products/{{Product_ID}}",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"products",
+										"{{Product_ID}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "427"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1ab-2AViYxt5eAsoFKLPdE51iwNUmBI\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 25 Jun 2025 14:06:35 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"6c608b30-2e1d-48d7-9633-425603fdadea\",\n    \"name\": \"iPhone 10\",\n    \"description\": \"Old Apple Flagship\",\n    \"price\": 899,\n    \"stock\": 25,\n    \"images\": [\n        \"https://res.cloudinary.com/drlvkewbn/image/upload/v1750860393/products/q9qribn26mg4z4wacbio.jpg\"\n    ],\n    \"subcategoryId\": \"e9781798-caaa-45c0-a984-c64fa5c630e1\",\n    \"sales\": 0,\n    \"createdById\": \"7cdf775c-9230-4a92-90d5-7b96c733b4eb\",\n    \"createdAt\": \"2025-06-25T13:55:54.366Z\",\n    \"updatedAt\": \"2025-06-25T14:06:35.771Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "deleteProduct",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/products/{{Product_ID}}",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"products",
+								"{{Product_ID}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "deleteProduct",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:3000/products/{{Product_ID}}",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"products",
+										"{{Product_ID}}"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1ab-2AViYxt5eAsoFKLPdE51iwNUmBI\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 25 Jun 2025 14:09:57 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "getSingleProduct",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/products/{{Product_ID}}",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"products",
+								"{{Product_ID}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "getSingleProduct",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:3000/products/{{Product_ID}}",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"products",
+										"{{Product_ID}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1231"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"4cf-E0llQy5DWS92pNKwlpmjIU401hk\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 25 Jun 2025 14:08:53 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"6c608b30-2e1d-48d7-9633-425603fdadea\",\n    \"name\": \"iPhone 10\",\n    \"description\": \"Old Apple Flagship\",\n    \"price\": 899,\n    \"stock\": 25,\n    \"images\": [\n        \"https://res.cloudinary.com/drlvkewbn/image/upload/v1750860393/products/q9qribn26mg4z4wacbio.jpg\"\n    ],\n    \"subcategoryId\": \"e9781798-caaa-45c0-a984-c64fa5c630e1\",\n    \"sales\": 0,\n    \"createdById\": \"7cdf775c-9230-4a92-90d5-7b96c733b4eb\",\n    \"createdAt\": \"2025-06-25T13:55:54.366Z\",\n    \"updatedAt\": \"2025-06-25T14:06:35.771Z\",\n    \"subcategory\": {\n        \"id\": \"e9781798-caaa-45c0-a984-c64fa5c630e1\",\n        \"name\": \"Laptops\",\n        \"description\": \"All laptops\",\n        \"categoryId\": \"b669e03e-8abb-41b6-b134-db2d8fd3b321\",\n        \"createdById\": \"7cdf775c-9230-4a92-90d5-7b96c733b4eb\",\n        \"createdAt\": \"2025-06-25T12:12:27.332Z\",\n        \"updatedAt\": \"2025-06-25T12:12:27.332Z\",\n        \"category\": {\n            \"id\": \"b669e03e-8abb-41b6-b134-db2d8fd3b321\",\n            \"name\": \"Electronics\",\n            \"description\": \"All kinds of gadgets\",\n            \"createdById\": \"7cdf775c-9230-4a92-90d5-7b96c733b4eb\",\n            \"createdAt\": \"2025-06-25T11:58:36.848Z\",\n            \"updatedAt\": \"2025-06-25T11:58:36.848Z\"\n        }\n    },\n    \"createdBy\": {\n        \"id\": \"7cdf775c-9230-4a92-90d5-7b96c733b4eb\",\n        \"email\": \"user@example.com\",\n        \"name\": \"John Doe\",\n        \"password\": \"$2b$10$W0w8/YEZciTszp7btqy.8OrBFlTh0H3b2rhJDxK6Th2dPphg3fCJS\",\n        \"role\": \"ADMIN\",\n        \"createdAt\": \"2025-06-25T11:10:13.729Z\",\n        \"updatedAt\": \"2025-06-25T11:10:13.729Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "getAllProducts",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/products",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "getAllProducts",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:3000/products",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"products"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "4803"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"12c3-NL5VTIQuCsPUQNzdbadOhZsYTvU\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 26 Jun 2025 11:26:49 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": \"07918b81-a986-4ea7-9190-8872a42c2a0a\",\n            \"name\": \"iPhone 18\",\n            \"description\": \"Latest Apple Flagship\",\n            \"price\": 1299,\n            \"stock\": 45,\n            \"images\": [],\n            \"subcategoryId\": \"e9781798-caaa-45c0-a984-c64fa5c630e1\",\n            \"sales\": 5,\n            \"createdById\": \"6f27925e-0795-496a-870d-e99650d1aec9\",\n            \"createdAt\": \"2025-06-26T11:21:03.773Z\",\n            \"updatedAt\": \"2025-06-26T11:26:14.771Z\",\n            \"subcategory\": {\n                \"id\": \"e9781798-caaa-45c0-a984-c64fa5c630e1\",\n                \"name\": \"Laptops\",\n                \"description\": \"All laptops\",\n                \"categoryId\": \"b669e03e-8abb-41b6-b134-db2d8fd3b321\",\n                \"createdById\": \"7cdf775c-9230-4a92-90d5-7b96c733b4eb\",\n                \"createdAt\": \"2025-06-25T12:12:27.332Z\",\n                \"updatedAt\": \"2025-06-25T12:12:27.332Z\",\n                \"category\": {\n                    \"id\": \"b669e03e-8abb-41b6-b134-db2d8fd3b321\",\n                    \"name\": \"Electronics\",\n                    \"description\": \"All kinds of gadgets\",\n                    \"createdById\": \"7cdf775c-9230-4a92-90d5-7b96c733b4eb\",\n                    \"createdAt\": \"2025-06-25T11:58:36.848Z\",\n                    \"updatedAt\": \"2025-06-25T11:58:36.848Z\"\n                }\n            },\n            \"createdBy\": {\n                \"id\": \"6f27925e-0795-496a-870d-e99650d1aec9\",\n                \"email\": \"user1@example.com\",\n                \"name\": \"John Doe\",\n                \"password\": \"$2b$10$Pwd9dL6JfVUJZO7z9ZmmEebtjshoawkMWkEGJhcli4jjmhEH2JA.q\",\n                \"role\": \"ADMIN\",\n                \"createdAt\": \"2025-06-26T11:19:46.135Z\",\n                \"updatedAt\": \"2025-06-26T11:19:46.135Z\"\n            }\n        },\n        {\n            \"id\": \"77408c63-65f5-4d2c-ab68-438a2b5d73aa\",\n            \"name\": \"iPhone 17\",\n            \"description\": \"Latest Apple Flagship\",\n            \"price\": 1299,\n            \"stock\": 43,\n            \"images\": [],\n            \"subcategoryId\": \"e9781798-caaa-45c0-a984-c64fa5c630e1\",\n            \"sales\": 7,\n            \"createdById\": \"7cdf775c-9230-4a92-90d5-7b96c733b4eb\",\n            \"createdAt\": \"2025-06-26T11:01:27.036Z\",\n            \"updatedAt\": \"2025-06-26T11:05:17.006Z\",\n            \"subcategory\": {\n                \"id\": \"e9781798-caaa-45c0-a984-c64fa5c630e1\",\n                \"name\": \"Laptops\",\n                \"description\": \"All laptops\",\n                \"categoryId\": \"b669e03e-8abb-41b6-b134-db2d8fd3b321\",\n                \"createdById\": \"7cdf775c-9230-4a92-90d5-7b96c733b4eb\",\n                \"createdAt\": \"2025-06-25T12:12:27.332Z\",\n                \"updatedAt\": \"2025-06-25T12:12:27.332Z\",\n                \"category\": {\n                    \"id\": \"b669e03e-8abb-41b6-b134-db2d8fd3b321\",\n                    \"name\": \"Electronics\",\n                    \"description\": \"All kinds of gadgets\",\n                    \"createdById\": \"7cdf775c-9230-4a92-90d5-7b96c733b4eb\",\n                    \"createdAt\": \"2025-06-25T11:58:36.848Z\",\n                    \"updatedAt\": \"2025-06-25T11:58:36.848Z\"\n                }\n            },\n            \"createdBy\": {\n                \"id\": \"7cdf775c-9230-4a92-90d5-7b96c733b4eb\",\n                \"email\": \"user@example.com\",\n                \"name\": \"John Doe\",\n                \"password\": \"$2b$10$W0w8/YEZciTszp7btqy.8OrBFlTh0H3b2rhJDxK6Th2dPphg3fCJS\",\n                \"role\": \"ADMIN\",\n                \"createdAt\": \"2025-06-25T11:10:13.729Z\",\n                \"updatedAt\": \"2025-06-25T11:10:13.729Z\"\n            }\n        },\n        {\n            \"id\": \"56ac119c-3538-4378-98ce-9886c6065ccc\",\n            \"name\": \"iPhone 16\",\n            \"description\": \"Latest Apple Flagship\",\n            \"price\": 1299,\n            \"stock\": 5,\n            \"images\": [],\n            \"subcategoryId\": \"e9781798-caaa-45c0-a984-c64fa5c630e1\",\n            \"sales\": 45,\n            \"createdById\": \"7cdf775c-9230-4a92-90d5-7b96c733b4eb\",\n            \"createdAt\": \"2025-06-26T08:00:51.651Z\",\n            \"updatedAt\": \"2025-06-26T10:56:06.618Z\",\n            \"subcategory\": {\n                \"id\": \"e9781798-caaa-45c0-a984-c64fa5c630e1\",\n                \"name\": \"Laptops\",\n                \"description\": \"All laptops\",\n                \"categoryId\": \"b669e03e-8abb-41b6-b134-db2d8fd3b321\",\n                \"createdById\": \"7cdf775c-9230-4a92-90d5-7b96c733b4eb\",\n                \"createdAt\": \"2025-06-25T12:12:27.332Z\",\n                \"updatedAt\": \"2025-06-25T12:12:27.332Z\",\n                \"category\": {\n                    \"id\": \"b669e03e-8abb-41b6-b134-db2d8fd3b321\",\n                    \"name\": \"Electronics\",\n                    \"description\": \"All kinds of gadgets\",\n                    \"createdById\": \"7cdf775c-9230-4a92-90d5-7b96c733b4eb\",\n                    \"createdAt\": \"2025-06-25T11:58:36.848Z\",\n                    \"updatedAt\": \"2025-06-25T11:58:36.848Z\"\n                }\n            },\n            \"createdBy\": {\n                \"id\": \"7cdf775c-9230-4a92-90d5-7b96c733b4eb\",\n                \"email\": \"user@example.com\",\n                \"name\": \"John Doe\",\n                \"password\": \"$2b$10$W0w8/YEZciTszp7btqy.8OrBFlTh0H3b2rhJDxK6Th2dPphg3fCJS\",\n                \"role\": \"ADMIN\",\n                \"createdAt\": \"2025-06-25T11:10:13.729Z\",\n                \"updatedAt\": \"2025-06-25T11:10:13.729Z\"\n            }\n        },\n        {\n            \"id\": \"5101f040-ff1b-407d-9b27-67119c2caa68\",\n            \"name\": \"iPhone 15\",\n            \"description\": \"Latest Apple Flagship\",\n            \"price\": 1299,\n            \"stock\": 50,\n            \"images\": [\n                \"https://res.cloudinary.com/drlvkewbn/image/upload/v1750861294/products/fxperp3tsthdkki616ln.jpg\",\n                \"https://res.cloudinary.com/drlvkewbn/image/upload/v1750861293/products/ofm0b97389fdtbpgdvcs.jpg\"\n            ],\n            \"subcategoryId\": \"e9781798-caaa-45c0-a984-c64fa5c630e1\",\n            \"sales\": 0,\n            \"createdById\": \"7cdf775c-9230-4a92-90d5-7b96c733b4eb\",\n            \"createdAt\": \"2025-06-25T14:21:35.489Z\",\n            \"updatedAt\": \"2025-06-25T14:21:35.489Z\",\n            \"subcategory\": {\n                \"id\": \"e9781798-caaa-45c0-a984-c64fa5c630e1\",\n                \"name\": \"Laptops\",\n                \"description\": \"All laptops\",\n                \"categoryId\": \"b669e03e-8abb-41b6-b134-db2d8fd3b321\",\n                \"createdById\": \"7cdf775c-9230-4a92-90d5-7b96c733b4eb\",\n                \"createdAt\": \"2025-06-25T12:12:27.332Z\",\n                \"updatedAt\": \"2025-06-25T12:12:27.332Z\",\n                \"category\": {\n                    \"id\": \"b669e03e-8abb-41b6-b134-db2d8fd3b321\",\n                    \"name\": \"Electronics\",\n                    \"description\": \"All kinds of gadgets\",\n                    \"createdById\": \"7cdf775c-9230-4a92-90d5-7b96c733b4eb\",\n                    \"createdAt\": \"2025-06-25T11:58:36.848Z\",\n                    \"updatedAt\": \"2025-06-25T11:58:36.848Z\"\n                }\n            },\n            \"createdBy\": {\n                \"id\": \"7cdf775c-9230-4a92-90d5-7b96c733b4eb\",\n                \"email\": \"user@example.com\",\n                \"name\": \"John Doe\",\n                \"password\": \"$2b$10$W0w8/YEZciTszp7btqy.8OrBFlTh0H3b2rhJDxK6Th2dPphg3fCJS\",\n                \"role\": \"ADMIN\",\n                \"createdAt\": \"2025-06-25T11:10:13.729Z\",\n                \"updatedAt\": \"2025-06-25T11:10:13.729Z\"\n            }\n        }\n    ],\n    \"meta\": {\n        \"total\": 4,\n        \"page\": 1,\n        \"lastPage\": 1\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Cart",
+			"item": [
+				{
+					"name": "getUserCart",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/cart",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"cart"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "getUserCart",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:3000/cart",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"cart"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "182"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"b6-vhhFVA8YrNuzJ04wnQiWX9nF2Ug\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 25 Jun 2025 14:15:00 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"de4e593b-fcbb-442f-a380-f628808f3944\",\n    \"userId\": \"7cdf775c-9230-4a92-90d5-7b96c733b4eb\",\n    \"createdAt\": \"2025-06-25T14:15:00.136Z\",\n    \"updatedAt\": \"2025-06-25T14:15:00.136Z\",\n    \"items\": []\n}"
+						}
+					]
+				},
+				{
+					"name": "addToCart",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"productId\": \"07918b81-a986-4ea7-9190-8872a42c2a0a\",\r\n  \"quantity\": 5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/cart/add",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"cart",
+								"add"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "addToCart",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"productId\": \"5101f040-ff1b-407d-9b27-67119c2caa68\",\r\n  \"quantity\": 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/cart/add",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"cart",
+										"add"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "248"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"f8-o9VmftpgmwNfwshh1mnfOgs3nsk\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 25 Jun 2025 14:22:18 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"03efd86a-3bc7-4668-be63-38964022b048\",\n    \"cartId\": \"de4e593b-fcbb-442f-a380-f628808f3944\",\n    \"productId\": \"5101f040-ff1b-407d-9b27-67119c2caa68\",\n    \"quantity\": 2,\n    \"price\": 1299,\n    \"createdAt\": \"2025-06-25T14:22:18.256Z\",\n    \"updatedAt\": \"2025-06-25T14:22:18.256Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "updateCart",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"productId\": \"566a9031-3c28-4a8b-b755-e50aa071112e\",\r\n  \"quantity\": 7\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/cart/update/{{Cart_Item_ID}}",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"cart",
+								"update",
+								"{{Cart_Item_ID}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "updateCart",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"productId\": \"5101f040-ff1b-407d-9b27-67119c2caa68\",\r\n  \"quantity\": 3\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/cart/update/{{Cart_Item_ID}}",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"cart",
+										"update",
+										"{{Cart_Item_ID}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "248"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"f8-RzVBoJQSVXugcdo3JKrezR0fMtI\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 25 Jun 2025 14:27:00 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"03efd86a-3bc7-4668-be63-38964022b048\",\n    \"cartId\": \"de4e593b-fcbb-442f-a380-f628808f3944\",\n    \"productId\": \"5101f040-ff1b-407d-9b27-67119c2caa68\",\n    \"quantity\": 3,\n    \"price\": 1299,\n    \"createdAt\": \"2025-06-25T14:22:18.256Z\",\n    \"updatedAt\": \"2025-06-25T14:27:00.624Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "removeCartItem",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/cart/remove/{{Cart_Item_ID}}",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"cart",
+								"remove",
+								"{{Cart_Item_ID}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "removeCartItem",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:3000/cart/remove/{{Cart_Item_ID}}",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"cart",
+										"remove",
+										"{{Cart_Item_ID}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "248"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"f8-RzVBoJQSVXugcdo3JKrezR0fMtI\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 25 Jun 2025 14:29:00 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"03efd86a-3bc7-4668-be63-38964022b048\",\n    \"cartId\": \"de4e593b-fcbb-442f-a380-f628808f3944\",\n    \"productId\": \"5101f040-ff1b-407d-9b27-67119c2caa68\",\n    \"quantity\": 3,\n    \"price\": 1299,\n    \"createdAt\": \"2025-06-25T14:22:18.256Z\",\n    \"updatedAt\": \"2025-06-25T14:27:00.624Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "clearCart",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/cart/clear",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"cart",
+								"clear"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "clearCart",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:3000/cart/clear",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"cart",
+										"clear"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "39"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"27-oEY1AezaNQbp8qUQ1twiVUiP76A\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 25 Jun 2025 14:30:55 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Cart cleared successfully\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Order",
+			"item": [
+				{
+					"name": "placeOrder",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \r\n  \"shippingAddressId\": \"23dd324e-1ca2-4ce7-bde6-b569599f9a3c\",\r\n  \"billingAddressId\": \"87418060-5b9f-4c62-a5bc-10fa50ac378f\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/orders",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"orders"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "placeOrder",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \r\n  \"shippingAddressId\": \"23dd324e-1ca2-4ce7-bde6-b569599f9a3c\",\r\n  \"billingAddressId\": \"87418060-5b9f-4c62-a5bc-10fa50ac378f\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/orders",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"orders"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1288"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"508-VNKNuAH2rse/DuoKu54w5zD/BZE\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 26 Jun 2025 11:26:14 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"0b155167-fb4c-4aa0-9c53-1761cc79f544\",\n    \"userId\": \"6f27925e-0795-496a-870d-e99650d1aec9\",\n    \"totalAmount\": 6495,\n    \"discount\": 0,\n    \"couponCode\": null,\n    \"status\": \"PENDING\",\n    \"createdAt\": \"2025-06-26T11:26:14.759Z\",\n    \"shippingAddressId\": \"23dd324e-1ca2-4ce7-bde6-b569599f9a3c\",\n    \"billingAddressId\": \"87418060-5b9f-4c62-a5bc-10fa50ac378f\",\n    \"updatedAt\": \"2025-06-26T11:26:14.759Z\",\n    \"couponId\": null,\n    \"orderItems\": [\n        {\n            \"id\": \"88ce7818-f42d-4f8d-86b5-dac19a9e272c\",\n            \"orderId\": \"0b155167-fb4c-4aa0-9c53-1761cc79f544\",\n            \"productId\": \"07918b81-a986-4ea7-9190-8872a42c2a0a\",\n            \"quantity\": 5,\n            \"price\": 1299\n        }\n    ],\n    \"shippingAddress\": {\n        \"id\": \"23dd324e-1ca2-4ce7-bde6-b569599f9a3c\",\n        \"userId\": \"7cdf775c-9230-4a92-90d5-7b96c733b4eb\",\n        \"type\": \"SHIPPING\",\n        \"fullName\": \"John Doe\",\n        \"phone\": \"1234567890\",\n        \"street\": \"123 Street\",\n        \"city\": \"Karachi\",\n        \"state\": \"Sindh\",\n        \"postalCode\": \"74000\",\n        \"country\": \"Pakistan\",\n        \"isDefault\": true,\n        \"createdAt\": \"2025-06-26T08:36:37.903Z\",\n        \"updatedAt\": \"2025-06-26T08:36:37.903Z\"\n    },\n    \"billingAddress\": {\n        \"id\": \"87418060-5b9f-4c62-a5bc-10fa50ac378f\",\n        \"userId\": \"7cdf775c-9230-4a92-90d5-7b96c733b4eb\",\n        \"type\": \"BILLING\",\n        \"fullName\": \"John Doe\",\n        \"phone\": \"1234567890\",\n        \"street\": \"123 Street\",\n        \"city\": \"Karachi\",\n        \"state\": \"Sindh\",\n        \"postalCode\": \"74000\",\n        \"country\": \"Pakistan\",\n        \"isDefault\": true,\n        \"createdAt\": \"2025-06-26T08:40:30.310Z\",\n        \"updatedAt\": \"2025-06-26T08:40:30.310Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "getUserOrders",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/orders/user",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"orders",
+								"user"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "getUserOrders",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:3000/orders/user",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"orders",
+										"user"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "4211"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1073-dlQxk8zIa57NS2MjHIvjcNDCA0M\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 26 Jun 2025 09:14:48 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": \"1a1e52a1-1dc5-46e1-8b1b-b55fd50a9dc9\",\n            \"userId\": \"7cdf775c-9230-4a92-90d5-7b96c733b4eb\",\n            \"totalAmount\": 2598,\n            \"discount\": 0,\n            \"couponCode\": null,\n            \"status\": \"PENDING\",\n            \"createdAt\": \"2025-06-26T09:14:03.851Z\",\n            \"shippingAddressId\": \"23dd324e-1ca2-4ce7-bde6-b569599f9a3c\",\n            \"billingAddressId\": \"87418060-5b9f-4c62-a5bc-10fa50ac378f\",\n            \"updatedAt\": \"2025-06-26T09:14:03.851Z\",\n            \"couponId\": null,\n            \"orderItems\": [\n                {\n                    \"id\": \"1d207312-1d7c-478f-8ac9-0af45e68f111\",\n                    \"orderId\": \"1a1e52a1-1dc5-46e1-8b1b-b55fd50a9dc9\",\n                    \"productId\": \"56ac119c-3538-4378-98ce-9886c6065ccc\",\n                    \"quantity\": 2,\n                    \"price\": 1299\n                }\n            ],\n            \"shippingAddress\": {\n                \"id\": \"23dd324e-1ca2-4ce7-bde6-b569599f9a3c\",\n                \"userId\": \"7cdf775c-9230-4a92-90d5-7b96c733b4eb\",\n                \"type\": \"SHIPPING\",\n                \"fullName\": \"John Doe\",\n                \"phone\": \"1234567890\",\n                \"street\": \"123 Street\",\n                \"city\": \"Karachi\",\n                \"state\": \"Sindh\",\n                \"postalCode\": \"74000\",\n                \"country\": \"Pakistan\",\n                \"isDefault\": true,\n                \"createdAt\": \"2025-06-26T08:36:37.903Z\",\n                \"updatedAt\": \"2025-06-26T08:36:37.903Z\"\n            },\n            \"billingAddress\": {\n                \"id\": \"87418060-5b9f-4c62-a5bc-10fa50ac378f\",\n                \"userId\": \"7cdf775c-9230-4a92-90d5-7b96c733b4eb\",\n                \"type\": \"BILLING\",\n                \"fullName\": \"John Doe\",\n                \"phone\": \"1234567890\",\n                \"street\": \"123 Street\",\n                \"city\": \"Karachi\",\n                \"state\": \"Sindh\",\n                \"postalCode\": \"74000\",\n                \"country\": \"Pakistan\",\n                \"isDefault\": true,\n                \"createdAt\": \"2025-06-26T08:40:30.310Z\",\n                \"updatedAt\": \"2025-06-26T08:40:30.310Z\"\n            }\n        },\n        {\n            \"id\": \"267f53b8-dc7d-4837-a6aa-0b1344d0a80a\",\n            \"userId\": \"7cdf775c-9230-4a92-90d5-7b96c733b4eb\",\n            \"totalAmount\": 1299,\n            \"discount\": 0,\n            \"couponCode\": null,\n            \"status\": \"PENDING\",\n            \"createdAt\": \"2025-06-26T08:43:36.042Z\",\n            \"shippingAddressId\": null,\n            \"billingAddressId\": null,\n            \"updatedAt\": \"2025-06-26T08:43:36.042Z\",\n            \"couponId\": null,\n            \"orderItems\": [\n                {\n                    \"id\": \"e1a232a7-02b8-49d5-9bc2-5e56272840ac\",\n                    \"orderId\": \"267f53b8-dc7d-4837-a6aa-0b1344d0a80a\",\n                    \"productId\": \"56ac119c-3538-4378-98ce-9886c6065ccc\",\n                    \"quantity\": 1,\n                    \"price\": 1299\n                }\n            ],\n            \"shippingAddress\": null,\n            \"billingAddress\": null\n        },\n        {\n            \"id\": \"9c6f4697-0481-4932-ae3d-a1a8cd293ca6\",\n            \"userId\": \"7cdf775c-9230-4a92-90d5-7b96c733b4eb\",\n            \"totalAmount\": 15588,\n            \"discount\": 0,\n            \"couponCode\": null,\n            \"status\": \"PENDING\",\n            \"createdAt\": \"2025-06-26T08:02:31.021Z\",\n            \"shippingAddressId\": null,\n            \"billingAddressId\": null,\n            \"updatedAt\": \"2025-06-26T08:02:31.021Z\",\n            \"couponId\": null,\n            \"orderItems\": [\n                {\n                    \"id\": \"7fc95733-5256-49ad-abb5-458db016bceb\",\n                    \"orderId\": \"9c6f4697-0481-4932-ae3d-a1a8cd293ca6\",\n                    \"productId\": \"5101f040-ff1b-407d-9b27-67119c2caa68\",\n                    \"quantity\": 10,\n                    \"price\": 1299\n                },\n                {\n                    \"id\": \"345233ee-e222-409e-842f-71d3c0c98b35\",\n                    \"orderId\": \"9c6f4697-0481-4932-ae3d-a1a8cd293ca6\",\n                    \"productId\": \"56ac119c-3538-4378-98ce-9886c6065ccc\",\n                    \"quantity\": 2,\n                    \"price\": 1299\n                }\n            ],\n            \"shippingAddress\": null,\n            \"billingAddress\": null\n        },\n        {\n            \"id\": \"5e8da623-f2d7-4fe2-92bb-fbc11ef7c303\",\n            \"userId\": \"7cdf775c-9230-4a92-90d5-7b96c733b4eb\",\n            \"totalAmount\": 2598,\n            \"discount\": 0,\n            \"couponCode\": null,\n            \"status\": \"PENDING\",\n            \"createdAt\": \"2025-06-26T07:51:32.274Z\",\n            \"shippingAddressId\": null,\n            \"billingAddressId\": null,\n            \"updatedAt\": \"2025-06-26T07:51:32.274Z\",\n            \"couponId\": null,\n            \"orderItems\": [\n                {\n                    \"id\": \"0913bf6f-639b-4b30-b0dc-03c73b6005f8\",\n                    \"orderId\": \"5e8da623-f2d7-4fe2-92bb-fbc11ef7c303\",\n                    \"productId\": \"5101f040-ff1b-407d-9b27-67119c2caa68\",\n                    \"quantity\": 2,\n                    \"price\": 1299\n                }\n            ],\n            \"shippingAddress\": null,\n            \"billingAddress\": null\n        },\n        {\n            \"id\": \"8ec23bf8-0246-4fd9-ad95-38d47c1f01b7\",\n            \"userId\": \"7cdf775c-9230-4a92-90d5-7b96c733b4eb\",\n            \"totalAmount\": 2573,\n            \"discount\": 25,\n            \"couponCode\": \"SUMMER25\",\n            \"status\": \"PENDING\",\n            \"createdAt\": \"2025-06-26T07:46:59.009Z\",\n            \"shippingAddressId\": null,\n            \"billingAddressId\": null,\n            \"updatedAt\": \"2025-06-26T07:46:59.009Z\",\n            \"couponId\": null,\n            \"orderItems\": [\n                {\n                    \"id\": \"24c88ea7-a2b2-4ddf-ad67-bf27fd7dc39e\",\n                    \"orderId\": \"8ec23bf8-0246-4fd9-ad95-38d47c1f01b7\",\n                    \"productId\": \"5101f040-ff1b-407d-9b27-67119c2caa68\",\n                    \"quantity\": 2,\n                    \"price\": 1299\n                }\n            ],\n            \"shippingAddress\": null,\n            \"billingAddress\": null\n        },\n        {\n            \"id\": \"0e0aaa5b-5998-44ed-ba86-ab1e842cc149\",\n            \"userId\": \"7cdf775c-9230-4a92-90d5-7b96c733b4eb\",\n            \"totalAmount\": 2598,\n            \"discount\": 0,\n            \"couponCode\": null,\n            \"status\": \"PENDING\",\n            \"createdAt\": \"2025-06-26T06:15:19.270Z\",\n            \"shippingAddressId\": null,\n            \"billingAddressId\": null,\n            \"updatedAt\": \"2025-06-26T06:23:28.478Z\",\n            \"couponId\": null,\n            \"orderItems\": [\n                {\n                    \"id\": \"d31f210f-0176-446b-aef4-7869d3dba755\",\n                    \"orderId\": \"0e0aaa5b-5998-44ed-ba86-ab1e842cc149\",\n                    \"productId\": \"5101f040-ff1b-407d-9b27-67119c2caa68\",\n                    \"quantity\": 2,\n                    \"price\": 1299\n                }\n            ],\n            \"shippingAddress\": null,\n            \"billingAddress\": null\n        }\n    ],\n    \"meta\": {\n        \"total\": 6,\n        \"page\": 1,\n        \"lastPage\": 1\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "getSingleOrder",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/orders/{{Order_ID}}",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"orders",
+								"{{Order_ID}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "getSingleOrder",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:3000/orders/{{Order_ID}}",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"orders",
+										"{{Order_ID}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1288"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"508-TbUIS+KCe80pwrIXMFoZBERCiic\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 26 Jun 2025 09:16:24 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"1a1e52a1-1dc5-46e1-8b1b-b55fd50a9dc9\",\n    \"userId\": \"7cdf775c-9230-4a92-90d5-7b96c733b4eb\",\n    \"totalAmount\": 2598,\n    \"discount\": 0,\n    \"couponCode\": null,\n    \"status\": \"PENDING\",\n    \"createdAt\": \"2025-06-26T09:14:03.851Z\",\n    \"shippingAddressId\": \"23dd324e-1ca2-4ce7-bde6-b569599f9a3c\",\n    \"billingAddressId\": \"87418060-5b9f-4c62-a5bc-10fa50ac378f\",\n    \"updatedAt\": \"2025-06-26T09:14:03.851Z\",\n    \"couponId\": null,\n    \"orderItems\": [\n        {\n            \"id\": \"1d207312-1d7c-478f-8ac9-0af45e68f111\",\n            \"orderId\": \"1a1e52a1-1dc5-46e1-8b1b-b55fd50a9dc9\",\n            \"productId\": \"56ac119c-3538-4378-98ce-9886c6065ccc\",\n            \"quantity\": 2,\n            \"price\": 1299\n        }\n    ],\n    \"shippingAddress\": {\n        \"id\": \"23dd324e-1ca2-4ce7-bde6-b569599f9a3c\",\n        \"userId\": \"7cdf775c-9230-4a92-90d5-7b96c733b4eb\",\n        \"type\": \"SHIPPING\",\n        \"fullName\": \"John Doe\",\n        \"phone\": \"1234567890\",\n        \"street\": \"123 Street\",\n        \"city\": \"Karachi\",\n        \"state\": \"Sindh\",\n        \"postalCode\": \"74000\",\n        \"country\": \"Pakistan\",\n        \"isDefault\": true,\n        \"createdAt\": \"2025-06-26T08:36:37.903Z\",\n        \"updatedAt\": \"2025-06-26T08:36:37.903Z\"\n    },\n    \"billingAddress\": {\n        \"id\": \"87418060-5b9f-4c62-a5bc-10fa50ac378f\",\n        \"userId\": \"7cdf775c-9230-4a92-90d5-7b96c733b4eb\",\n        \"type\": \"BILLING\",\n        \"fullName\": \"John Doe\",\n        \"phone\": \"1234567890\",\n        \"street\": \"123 Street\",\n        \"city\": \"Karachi\",\n        \"state\": \"Sindh\",\n        \"postalCode\": \"74000\",\n        \"country\": \"Pakistan\",\n        \"isDefault\": true,\n        \"createdAt\": \"2025-06-26T08:40:30.310Z\",\n        \"updatedAt\": \"2025-06-26T08:40:30.310Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "getAllOrders",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/admin/orders",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admin",
+								"orders"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "getAllOrders",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:3000/admin/orders",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"admin",
+										"orders"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "4848"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"12f0-8sg/C8ecYh0XuXcPZn6MPZVU5G4\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 26 Jun 2025 09:16:53 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": \"1a1e52a1-1dc5-46e1-8b1b-b55fd50a9dc9\",\n            \"userId\": \"7cdf775c-9230-4a92-90d5-7b96c733b4eb\",\n            \"totalAmount\": 2598,\n            \"discount\": 0,\n            \"couponCode\": null,\n            \"status\": \"PENDING\",\n            \"createdAt\": \"2025-06-26T09:14:03.851Z\",\n            \"shippingAddressId\": \"23dd324e-1ca2-4ce7-bde6-b569599f9a3c\",\n            \"billingAddressId\": \"87418060-5b9f-4c62-a5bc-10fa50ac378f\",\n            \"updatedAt\": \"2025-06-26T09:14:03.851Z\",\n            \"couponId\": null,\n            \"orderItems\": [\n                {\n                    \"id\": \"1d207312-1d7c-478f-8ac9-0af45e68f111\",\n                    \"orderId\": \"1a1e52a1-1dc5-46e1-8b1b-b55fd50a9dc9\",\n                    \"productId\": \"56ac119c-3538-4378-98ce-9886c6065ccc\",\n                    \"quantity\": 2,\n                    \"price\": 1299\n                }\n            ],\n            \"user\": {\n                \"id\": \"7cdf775c-9230-4a92-90d5-7b96c733b4eb\",\n                \"email\": \"user@example.com\",\n                \"name\": \"John Doe\",\n                \"password\": \"$2b$10$W0w8/YEZciTszp7btqy.8OrBFlTh0H3b2rhJDxK6Th2dPphg3fCJS\",\n                \"role\": \"ADMIN\",\n                \"createdAt\": \"2025-06-25T11:10:13.729Z\",\n                \"updatedAt\": \"2025-06-25T11:10:13.729Z\"\n            }\n        },\n        {\n            \"id\": \"267f53b8-dc7d-4837-a6aa-0b1344d0a80a\",\n            \"userId\": \"7cdf775c-9230-4a92-90d5-7b96c733b4eb\",\n            \"totalAmount\": 1299,\n            \"discount\": 0,\n            \"couponCode\": null,\n            \"status\": \"PENDING\",\n            \"createdAt\": \"2025-06-26T08:43:36.042Z\",\n            \"shippingAddressId\": null,\n            \"billingAddressId\": null,\n            \"updatedAt\": \"2025-06-26T08:43:36.042Z\",\n            \"couponId\": null,\n            \"orderItems\": [\n                {\n                    \"id\": \"e1a232a7-02b8-49d5-9bc2-5e56272840ac\",\n                    \"orderId\": \"267f53b8-dc7d-4837-a6aa-0b1344d0a80a\",\n                    \"productId\": \"56ac119c-3538-4378-98ce-9886c6065ccc\",\n                    \"quantity\": 1,\n                    \"price\": 1299\n                }\n            ],\n            \"user\": {\n                \"id\": \"7cdf775c-9230-4a92-90d5-7b96c733b4eb\",\n                \"email\": \"user@example.com\",\n                \"name\": \"John Doe\",\n                \"password\": \"$2b$10$W0w8/YEZciTszp7btqy.8OrBFlTh0H3b2rhJDxK6Th2dPphg3fCJS\",\n                \"role\": \"ADMIN\",\n                \"createdAt\": \"2025-06-25T11:10:13.729Z\",\n                \"updatedAt\": \"2025-06-25T11:10:13.729Z\"\n            }\n        },\n        {\n            \"id\": \"9c6f4697-0481-4932-ae3d-a1a8cd293ca6\",\n            \"userId\": \"7cdf775c-9230-4a92-90d5-7b96c733b4eb\",\n            \"totalAmount\": 15588,\n            \"discount\": 0,\n            \"couponCode\": null,\n            \"status\": \"PENDING\",\n            \"createdAt\": \"2025-06-26T08:02:31.021Z\",\n            \"shippingAddressId\": null,\n            \"billingAddressId\": null,\n            \"updatedAt\": \"2025-06-26T08:02:31.021Z\",\n            \"couponId\": null,\n            \"orderItems\": [\n                {\n                    \"id\": \"7fc95733-5256-49ad-abb5-458db016bceb\",\n                    \"orderId\": \"9c6f4697-0481-4932-ae3d-a1a8cd293ca6\",\n                    \"productId\": \"5101f040-ff1b-407d-9b27-67119c2caa68\",\n                    \"quantity\": 10,\n                    \"price\": 1299\n                },\n                {\n                    \"id\": \"345233ee-e222-409e-842f-71d3c0c98b35\",\n                    \"orderId\": \"9c6f4697-0481-4932-ae3d-a1a8cd293ca6\",\n                    \"productId\": \"56ac119c-3538-4378-98ce-9886c6065ccc\",\n                    \"quantity\": 2,\n                    \"price\": 1299\n                }\n            ],\n            \"user\": {\n                \"id\": \"7cdf775c-9230-4a92-90d5-7b96c733b4eb\",\n                \"email\": \"user@example.com\",\n                \"name\": \"John Doe\",\n                \"password\": \"$2b$10$W0w8/YEZciTszp7btqy.8OrBFlTh0H3b2rhJDxK6Th2dPphg3fCJS\",\n                \"role\": \"ADMIN\",\n                \"createdAt\": \"2025-06-25T11:10:13.729Z\",\n                \"updatedAt\": \"2025-06-25T11:10:13.729Z\"\n            }\n        },\n        {\n            \"id\": \"5e8da623-f2d7-4fe2-92bb-fbc11ef7c303\",\n            \"userId\": \"7cdf775c-9230-4a92-90d5-7b96c733b4eb\",\n            \"totalAmount\": 2598,\n            \"discount\": 0,\n            \"couponCode\": null,\n            \"status\": \"PENDING\",\n            \"createdAt\": \"2025-06-26T07:51:32.274Z\",\n            \"shippingAddressId\": null,\n            \"billingAddressId\": null,\n            \"updatedAt\": \"2025-06-26T07:51:32.274Z\",\n            \"couponId\": null,\n            \"orderItems\": [\n                {\n                    \"id\": \"0913bf6f-639b-4b30-b0dc-03c73b6005f8\",\n                    \"orderId\": \"5e8da623-f2d7-4fe2-92bb-fbc11ef7c303\",\n                    \"productId\": \"5101f040-ff1b-407d-9b27-67119c2caa68\",\n                    \"quantity\": 2,\n                    \"price\": 1299\n                }\n            ],\n            \"user\": {\n                \"id\": \"7cdf775c-9230-4a92-90d5-7b96c733b4eb\",\n                \"email\": \"user@example.com\",\n                \"name\": \"John Doe\",\n                \"password\": \"$2b$10$W0w8/YEZciTszp7btqy.8OrBFlTh0H3b2rhJDxK6Th2dPphg3fCJS\",\n                \"role\": \"ADMIN\",\n                \"createdAt\": \"2025-06-25T11:10:13.729Z\",\n                \"updatedAt\": \"2025-06-25T11:10:13.729Z\"\n            }\n        },\n        {\n            \"id\": \"8ec23bf8-0246-4fd9-ad95-38d47c1f01b7\",\n            \"userId\": \"7cdf775c-9230-4a92-90d5-7b96c733b4eb\",\n            \"totalAmount\": 2573,\n            \"discount\": 25,\n            \"couponCode\": \"SUMMER25\",\n            \"status\": \"PENDING\",\n            \"createdAt\": \"2025-06-26T07:46:59.009Z\",\n            \"shippingAddressId\": null,\n            \"billingAddressId\": null,\n            \"updatedAt\": \"2025-06-26T07:46:59.009Z\",\n            \"couponId\": null,\n            \"orderItems\": [\n                {\n                    \"id\": \"24c88ea7-a2b2-4ddf-ad67-bf27fd7dc39e\",\n                    \"orderId\": \"8ec23bf8-0246-4fd9-ad95-38d47c1f01b7\",\n                    \"productId\": \"5101f040-ff1b-407d-9b27-67119c2caa68\",\n                    \"quantity\": 2,\n                    \"price\": 1299\n                }\n            ],\n            \"user\": {\n                \"id\": \"7cdf775c-9230-4a92-90d5-7b96c733b4eb\",\n                \"email\": \"user@example.com\",\n                \"name\": \"John Doe\",\n                \"password\": \"$2b$10$W0w8/YEZciTszp7btqy.8OrBFlTh0H3b2rhJDxK6Th2dPphg3fCJS\",\n                \"role\": \"ADMIN\",\n                \"createdAt\": \"2025-06-25T11:10:13.729Z\",\n                \"updatedAt\": \"2025-06-25T11:10:13.729Z\"\n            }\n        },\n        {\n            \"id\": \"0e0aaa5b-5998-44ed-ba86-ab1e842cc149\",\n            \"userId\": \"7cdf775c-9230-4a92-90d5-7b96c733b4eb\",\n            \"totalAmount\": 2598,\n            \"discount\": 0,\n            \"couponCode\": null,\n            \"status\": \"PENDING\",\n            \"createdAt\": \"2025-06-26T06:15:19.270Z\",\n            \"shippingAddressId\": null,\n            \"billingAddressId\": null,\n            \"updatedAt\": \"2025-06-26T06:23:28.478Z\",\n            \"couponId\": null,\n            \"orderItems\": [\n                {\n                    \"id\": \"d31f210f-0176-446b-aef4-7869d3dba755\",\n                    \"orderId\": \"0e0aaa5b-5998-44ed-ba86-ab1e842cc149\",\n                    \"productId\": \"5101f040-ff1b-407d-9b27-67119c2caa68\",\n                    \"quantity\": 2,\n                    \"price\": 1299\n                }\n            ],\n            \"user\": {\n                \"id\": \"7cdf775c-9230-4a92-90d5-7b96c733b4eb\",\n                \"email\": \"user@example.com\",\n                \"name\": \"John Doe\",\n                \"password\": \"$2b$10$W0w8/YEZciTszp7btqy.8OrBFlTh0H3b2rhJDxK6Th2dPphg3fCJS\",\n                \"role\": \"ADMIN\",\n                \"createdAt\": \"2025-06-25T11:10:13.729Z\",\n                \"updatedAt\": \"2025-06-25T11:10:13.729Z\"\n            }\n        }\n    ],\n    \"meta\": {\n        \"total\": 6,\n        \"page\": 1,\n        \"lastPage\": 1\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "updateOrderStatus",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"status\": \"DELIVERED\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/admin/orders/{{Order_ID}}/status",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admin",
+								"orders",
+								"{{Order_ID}}",
+								"status"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "updateOrderStatus",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"status\": \"COMPLETED\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/admin/orders/{{Order_ID}}/status",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"admin",
+										"orders",
+										"{{Order_ID}}",
+										"status"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "211"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"d3-IDcNOZ537UJ3QGbVT5Tndh3DTqU\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 26 Jun 2025 06:23:28 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"0e0aaa5b-5998-44ed-ba86-ab1e842cc149\",\n    \"userId\": \"7cdf775c-9230-4a92-90d5-7b96c733b4eb\",\n    \"totalAmount\": 2598,\n    \"status\": \"COMPLETED\",\n    \"createdAt\": \"2025-06-26T06:15:19.270Z\",\n    \"updatedAt\": \"2025-06-26T06:23:28.478Z\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Coupon",
+			"item": [
+				{
+					"name": "createCoupon",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"code\": \"SUMMER25\",\r\n  \"discount\": 25,\r\n  \"expiryDate\": \"2025-07-31T23:59:59.000Z\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/coupons",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"coupons"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "createCoupon",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"code\": \"SUMMER25\",\r\n  \"discount\": 25,\r\n  \"expiryDate\": \"2025-07-31T23:59:59.000Z\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/coupons",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"coupons"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "195"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"c3-o/hkgi1tyW0eAXCxA6adDE/ZvSI\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 26 Jun 2025 07:40:08 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"f77c5cc5-2b3a-4e05-9742-85228bc65bdc\",\n    \"code\": \"SUMMER25\",\n    \"discount\": 25,\n    \"expiryDate\": \"2025-07-31T23:59:59.000Z\",\n    \"createdAt\": \"2025-06-26T07:40:08.674Z\",\n    \"updatedAt\": \"2025-06-26T07:40:08.674Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "getAllCoupons",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/coupons",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"coupons"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "getAllCoupons",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:3000/coupons",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"coupons"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "197"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"c5-4ZlK3QFGMhg0+438NVb3MyD9FtI\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 26 Jun 2025 07:52:48 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"f77c5cc5-2b3a-4e05-9742-85228bc65bdc\",\n        \"code\": \"SUMMER25\",\n        \"discount\": 25,\n        \"expiryDate\": \"2025-07-31T23:59:59.000Z\",\n        \"createdAt\": \"2025-06-26T07:40:08.674Z\",\n        \"updatedAt\": \"2025-06-26T07:40:08.674Z\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "deleteCoupon",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/coupons/{{Coupon_ID}}",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"coupons",
+								"{{Coupon_ID}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "deleteCoupon",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:3000/coupons/{{Coupon_ID}}",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"coupons",
+										"{{Coupon_ID}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "195"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"c3-o/hkgi1tyW0eAXCxA6adDE/ZvSI\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 26 Jun 2025 07:55:14 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"f77c5cc5-2b3a-4e05-9742-85228bc65bdc\",\n    \"code\": \"SUMMER25\",\n    \"discount\": 25,\n    \"expiryDate\": \"2025-07-31T23:59:59.000Z\",\n    \"createdAt\": \"2025-06-26T07:40:08.674Z\",\n    \"updatedAt\": \"2025-06-26T07:40:08.674Z\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Address",
+			"item": [
+				{
+					"name": "createAddress",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"type\": \"BILLING\",\r\n  \"fullName\": \"John Doe\",\r\n  \"phone\": \"1234567890\",\r\n  \"street\": \"123 Street\",\r\n  \"city\": \"Karachi\",\r\n  \"state\": \"Sindh\",\r\n  \"postalCode\": \"74000\",\r\n  \"country\": \"Pakistan\",\r\n  \"isDefault\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/addresses",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"addresses"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "createAddress",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"type\": \"SHIPPING\",\r\n  \"fullName\": \"John Doe\",\r\n  \"phone\": \"1234567890\",\r\n  \"street\": \"123 Street\",\r\n  \"city\": \"Karachi\",\r\n  \"state\": \"Sindh\",\r\n  \"postalCode\": \"74000\",\r\n  \"country\": \"Pakistan\",\r\n  \"isDefault\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/addresses",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"addresses"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "346"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"15a-l6r3/4XWNUn91VS7h4IT8vvtJ8c\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 26 Jun 2025 08:34:06 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"ed18fe4a-c20d-4144-b31e-1c46b918622b\",\n    \"userId\": \"7cdf775c-9230-4a92-90d5-7b96c733b4eb\",\n    \"type\": \"SHIPPING\",\n    \"fullName\": \"John Doe\",\n    \"phone\": \"1234567890\",\n    \"street\": \"123 Street\",\n    \"city\": \"Karachi\",\n    \"state\": \"Sindh\",\n    \"postalCode\": \"74000\",\n    \"country\": \"Pakistan\",\n    \"isDefault\": true,\n    \"createdAt\": \"2025-06-26T08:34:06.611Z\",\n    \"updatedAt\": \"2025-06-26T08:34:06.611Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "updateAddress",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"type\": \"BILLING\",\r\n  \"fullName\": \"John Doe\",\r\n  \"phone\": \"1234567890\",\r\n  \"street\": \"123 Street\",\r\n  \"city\": \"Karachi\",\r\n  \"state\": \"Sindh\",\r\n  \"postalCode\": \"74000\",\r\n  \"country\": \"Pakistan\",\r\n  \"isDefault\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/addresses/{{Address_ID}}",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"addresses",
+								"{{Address_ID}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "updateAddress",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"type\": \"BILLING\",\r\n  \"fullName\": \"John Doe\",\r\n  \"phone\": \"1234567890\",\r\n  \"street\": \"123 Street\",\r\n  \"city\": \"Karachi\",\r\n  \"state\": \"Sindh\",\r\n  \"postalCode\": \"74000\",\r\n  \"country\": \"Pakistan\",\r\n  \"isDefault\": false\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/addresses/{{Address_ID}}",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"addresses",
+										"{{Address_ID}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "346"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"15a-s8kJ07FiGG66FzKoY2JkGV0EspU\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 26 Jun 2025 08:31:55 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"184d8efa-5db9-4f08-b081-0918b3589d14\",\n    \"userId\": \"7cdf775c-9230-4a92-90d5-7b96c733b4eb\",\n    \"type\": \"BILLING\",\n    \"fullName\": \"John Doe\",\n    \"phone\": \"1234567890\",\n    \"street\": \"123 Street\",\n    \"city\": \"Karachi\",\n    \"state\": \"Sindh\",\n    \"postalCode\": \"74000\",\n    \"country\": \"Pakistan\",\n    \"isDefault\": false,\n    \"createdAt\": \"2025-06-26T08:28:21.385Z\",\n    \"updatedAt\": \"2025-06-26T08:31:55.867Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "getSingleAddress",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/addresses/{{Address_ID}}",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"addresses",
+								"{{Address_ID}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "getSingleAddress",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:3000/addresses/{{Address_ID}}",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"addresses",
+										"{{Address_ID}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "346"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"15a-s8kJ07FiGG66FzKoY2JkGV0EspU\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 26 Jun 2025 08:33:13 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"184d8efa-5db9-4f08-b081-0918b3589d14\",\n    \"userId\": \"7cdf775c-9230-4a92-90d5-7b96c733b4eb\",\n    \"type\": \"BILLING\",\n    \"fullName\": \"John Doe\",\n    \"phone\": \"1234567890\",\n    \"street\": \"123 Street\",\n    \"city\": \"Karachi\",\n    \"state\": \"Sindh\",\n    \"postalCode\": \"74000\",\n    \"country\": \"Pakistan\",\n    \"isDefault\": false,\n    \"createdAt\": \"2025-06-26T08:28:21.385Z\",\n    \"updatedAt\": \"2025-06-26T08:31:55.867Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "deleteAddress",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/addresses/{{Address_ID}}",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"addresses",
+								"{{Address_ID}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "deleteAddress",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:3000/addresses/{{Address_ID}}",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"addresses",
+										"{{Address_ID}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "346"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"15a-s8kJ07FiGG66FzKoY2JkGV0EspU\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 26 Jun 2025 08:33:38 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"184d8efa-5db9-4f08-b081-0918b3589d14\",\n    \"userId\": \"7cdf775c-9230-4a92-90d5-7b96c733b4eb\",\n    \"type\": \"BILLING\",\n    \"fullName\": \"John Doe\",\n    \"phone\": \"1234567890\",\n    \"street\": \"123 Street\",\n    \"city\": \"Karachi\",\n    \"state\": \"Sindh\",\n    \"postalCode\": \"74000\",\n    \"country\": \"Pakistan\",\n    \"isDefault\": false,\n    \"createdAt\": \"2025-06-26T08:28:21.385Z\",\n    \"updatedAt\": \"2025-06-26T08:31:55.867Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "getAllAddresses",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/addresses",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"addresses"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "getAllAddresses",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:3000/addresses",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"addresses"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "348"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"15c-qeP2T2scDJqpwmjIyjMdWj6hgaw\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 26 Jun 2025 08:30:26 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"184d8efa-5db9-4f08-b081-0918b3589d14\",\n        \"userId\": \"7cdf775c-9230-4a92-90d5-7b96c733b4eb\",\n        \"type\": \"SHIPPING\",\n        \"fullName\": \"John Doe\",\n        \"phone\": \"1234567890\",\n        \"street\": \"123 Street\",\n        \"city\": \"Karachi\",\n        \"state\": \"Sindh\",\n        \"postalCode\": \"74000\",\n        \"country\": \"Pakistan\",\n        \"isDefault\": true,\n        \"createdAt\": \"2025-06-26T08:28:21.385Z\",\n        \"updatedAt\": \"2025-06-26T08:28:21.385Z\"\n    }\n]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Support Chat",
+			"item": [
+				{
+					"name": "getAllChats",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/support-chat/admin/chats",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"support-chat",
+								"admin",
+								"chats"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "getAllChats",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:3000/support-chat/admin/chats",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"support-chat",
+										"admin",
+										"chats"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2-l9Fw4VUO7kr8CvBlt4zaMCqXZ0w\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 26 Jun 2025 12:35:41 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[]"
+						}
+					]
+				},
+				{
+					"name": "markMessageAsRead",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"messageId\": \"e001a18a-885e-4231-962b-d6b2d8d735ad\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/support-chat/read",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"support-chat",
+								"read"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "markMessageAsRead",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"messageId\": \"e001a18a-885e-4231-962b-d6b2d8d735ad\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/support-chat/read",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"support-chat",
+										"read"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "241"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"f1-oqCjSyWN1hEOv9tCf5tNIxQi9cc\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 26 Jun 2025 13:04:42 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"e001a18a-885e-4231-962b-d6b2d8d735ad\",\n    \"chatId\": \"d5b2b751-0507-41da-bb13-422aae460bb8\",\n    \"senderId\": \"f85851bd-22b8-4842-b0f3-cea27390f58e\",\n    \"content\": \"Hello, I need help with my order\",\n    \"isRead\": true,\n    \"createdAt\": \"2025-06-26T12:56:51.602Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "getChatByUserId",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/support-chat/admin/chats/{{User_ID}}",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"support-chat",
+								"admin",
+								"chats",
+								"{{User_ID}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "getChatByUserId",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:3000/support-chat/admin/chats/{{User_ID}}",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"support-chat",
+										"admin",
+										"chats",
+										"{{User_ID}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "670"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"29e-6auvlfsgTuw6dVPtFeV7/m9e6PU\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 26 Jun 2025 13:00:28 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"d5b2b751-0507-41da-bb13-422aae460bb8\",\n    \"userId\": \"f85851bd-22b8-4842-b0f3-cea27390f58e\",\n    \"createdAt\": \"2025-06-26T12:56:51.586Z\",\n    \"updatedAt\": \"2025-06-26T12:56:51.586Z\",\n    \"messages\": [\n        {\n            \"id\": \"e001a18a-885e-4231-962b-d6b2d8d735ad\",\n            \"chatId\": \"d5b2b751-0507-41da-bb13-422aae460bb8\",\n            \"senderId\": \"f85851bd-22b8-4842-b0f3-cea27390f58e\",\n            \"content\": \"Hello, I need help with my order\",\n            \"isRead\": false,\n            \"createdAt\": \"2025-06-26T12:56:51.602Z\"\n        },\n        {\n            \"id\": \"15c9d210-d293-4644-9b5f-901f6669ddc3\",\n            \"chatId\": \"d5b2b751-0507-41da-bb13-422aae460bb8\",\n            \"senderId\": \"f85851bd-22b8-4842-b0f3-cea27390f58e\",\n            \"content\": \"Hello, I need help with my order\",\n            \"isRead\": false,\n            \"createdAt\": \"2025-06-26T12:59:57.698Z\"\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Default Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000",
+					"host": [
+						"localhost"
+					],
+					"port": "3000"
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "access_token",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2ZjI3OTI1ZS0wNzk1LTQ5NmEtODcwZC1lOTk2NTBkMWFlYzkiLCJlbWFpbCI6InVzZXIxQGV4YW1wbGUuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzUwOTM2ODIwLCJleHAiOjE3NTEwMjMyMjB9.37fNtUQv1Z-o2B3_iQPen313wwROG10sSUcPEodc-YE",
+			"type": "string"
+		},
+		{
+			"key": "User_ID",
+			"value": "f85851bd-22b8-4842-b0f3-cea27390f58e",
+			"type": "string"
+		},
+		{
+			"key": "Category_ID",
+			"value": "b669e03e-8abb-41b6-b134-db2d8fd3b321",
+			"type": "string"
+		},
+		{
+			"key": "SubCategory_ID",
+			"value": "e9781798-caaa-45c0-a984-c64fa5c630e1",
+			"type": "string"
+		},
+		{
+			"key": "Product_ID",
+			"value": "07918b81-a986-4ea7-9190-8872a42c2a0a",
+			"type": "string"
+		},
+		{
+			"key": "Cart_ID",
+			"value": "de4e593b-fcbb-442f-a380-f628808f3944",
+			"type": "string"
+		},
+		{
+			"key": "Cart_Item_ID",
+			"value": "a05623a9-5190-40cc-896f-b1e1615c8080",
+			"type": "string"
+		},
+		{
+			"key": "Order_ID",
+			"value": "1a1e52a1-1dc5-46e1-8b1b-b55fd50a9dc9",
+			"type": "string"
+		},
+		{
+			"key": "Coupon_ID",
+			"value": "55cc3414-ff0c-48bd-94e1-bcc192a64d79",
+			"type": "string"
+		},
+		{
+			"key": "Billing_Address_ID",
+			"value": "87418060-5b9f-4c62-a5bc-10fa50ac378f",
+			"type": "string"
+		},
+		{
+			"key": "Shipping_Address_ID",
+			"value": "23dd324e-1ca2-4ce7-bde6-b569599f9a3c",
+			"type": "string"
+		},
+		{
+			"key": "Message_ID",
+			"value": "e001a18a-885e-4231-962b-d6b2d8d735ad",
+			"type": "string"
+		}
+	]
+}

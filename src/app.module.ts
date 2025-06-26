@@ -13,6 +13,7 @@ import { CartModule } from './cart/cart.module';
 import { OrderModule } from './order/order.module';
 import { AddressModule } from './address/address.module';
 import { CouponModule } from './coupon/coupon.module';
+import { SupportChatModule } from './support-chat/support-chat.module';
 
 @Module({
   imports: 
@@ -29,7 +30,8 @@ import { CouponModule } from './coupon/coupon.module';
     CartModule,
     OrderModule,
     AddressModule,
-    CouponModule
+    CouponModule,
+    SupportChatModule
   ],
   controllers: [AppController],
   providers: [AppService],
