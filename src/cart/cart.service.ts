@@ -2,6 +2,7 @@ import {
   Injectable,
   NotFoundException,
   ForbiddenException,
+  BadRequestException,
 } from '@nestjs/common';
 import { PrismaService } from '../prisma/prisma.service';
 import { AddToCartDto } from './dto/add-to-cart.dto';
@@ -42,6 +43,10 @@ export class CartService {
     });
     if (!product) throw new NotFoundException('Product not found');
 
+    if (quantity > product.stock) {
+      throw new BadRequestException('Quantity exceeds available stock');
+    }
+
     let cart = await this.prisma.cart.findUnique({ where: { userId } });
     if (!cart) {
       cart = await this.prisma.cart.create({ data: { userId } });
@@ -54,10 +59,18 @@ export class CartService {
       },
     });
 
+    const totalQuantity = existingItem
+      ? existingItem.quantity + quantity
+      : quantity;
+
+    if (totalQuantity > product.stock) {
+      throw new BadRequestException('Total quantity exceeds available stock');
+    }
+
     if (existingItem) {
       return this.prisma.cartItem.update({
         where: { id: existingItem.id },
-        data: { quantity: existingItem.quantity + quantity },
+        data: { quantity: totalQuantity },
       });
     }
 
@@ -74,11 +87,15 @@ export class CartService {
   async updateCartItemQuantity(userId: string, itemId: string, quantity: number) {
     const item = await this.prisma.cartItem.findUnique({
       where: { id: itemId },
-      include: { cart: true },
+      include: { cart: true, product: true },
     });
 
     if (!item || item.cart.userId !== userId) {
       throw new ForbiddenException('Unauthorized or item not found');
+    }
+
+    if (quantity > item.product.stock) {
+      throw new BadRequestException('Quantity exceeds available stock');
     }
 
     return this.prisma.cartItem.update({

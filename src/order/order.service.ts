@@ -2,6 +2,7 @@ import {
   Injectable,
   NotFoundException,
   ForbiddenException,
+  BadRequestException,
 } from '@nestjs/common';
 import { PrismaService } from '../prisma/prisma.service';
 import { CreateOrderDto } from './dto/create-order.dto';
@@ -26,6 +27,23 @@ export class OrderService {
 
     if (!cart || cart.items.length === 0) {
       throw new NotFoundException('Cart is empty');
+    }
+
+    // Step 1: Validate stock for each product
+    for (const item of cart.items) {
+      const product = await this.prisma.product.findUnique({
+        where: { id: item.productId },
+      });
+
+      if (!product) {
+        throw new NotFoundException(`Product not found: ${item.productId}`);
+      }
+
+      if (product.stock < item.quantity) {
+        throw new BadRequestException(
+          `Insufficient stock for ${product.name}`,
+        );
+      }
     }
 
     const subtotal = cart.items.reduce(
@@ -64,9 +82,20 @@ export class OrderService {
       include: {
         orderItems: true,
         shippingAddress: true,
-        billingAddress: true
+        billingAddress: true,
       },
     });
+
+    // Step 2: Update stock and sales for each product
+    for (const item of cart.items) {
+      await this.prisma.product.update({
+        where: { id: item.productId },
+        data: {
+          stock: { decrement: item.quantity },
+          sales: { increment: item.quantity },
+        },
+      });
+    }
 
     await this.prisma.cartItem.deleteMany({ where: { cartId: cart.id } });
 
@@ -77,12 +106,11 @@ export class OrderService {
     const [orders, total] = await Promise.all([
       this.prisma.order.findMany({
         where: { userId },
-        include: { 
-        
-        orderItems: true, 
-        shippingAddress: true,
-        billingAddress: true 
-      },
+        include: {
+          orderItems: true,
+          shippingAddress: true,
+          billingAddress: true,
+        },
         orderBy: { createdAt: 'desc' },
         skip,
         take,
@@ -103,10 +131,10 @@ export class OrderService {
   async getOrderById(orderId: string, userId: string, role: string) {
     const order = await this.prisma.order.findUnique({
       where: { id: orderId },
-      include: { 
+      include: {
         orderItems: true,
         shippingAddress: true,
-        billingAddress: true 
+        billingAddress: true,
       },
     });
 
@@ -122,11 +150,11 @@ export class OrderService {
   async getAllOrders(page: number, limit: number, skip: number, take: number) {
     const [orders, total] = await Promise.all([
       this.prisma.order.findMany({
-        include: { 
+        include: {
           orderItems: true,
           user: true,
           shippingAddress: true,
-          billingAddress: true 
+          billingAddress: true,
         },
         orderBy: { createdAt: 'desc' },
         skip,
