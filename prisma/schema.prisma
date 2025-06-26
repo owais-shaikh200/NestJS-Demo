@@ -24,6 +24,7 @@ model User {
   subcategories Subcategory[]
   cart          Cart?
   Order         Order[]
+  Address       Address[]
 }
 
 enum Role {
@@ -69,7 +70,7 @@ model Product {
   subcategoryId String
   subcategory   Subcategory @relation(fields: [subcategoryId], references: [id])
   cartItems     CartItem[]
-  sales Int     @default(0)
+  sales         Int         @default(0)
 
   createdById String
   createdBy   User   @relation(fields: [createdById], references: [id])
@@ -106,14 +107,23 @@ model CartItem {
 }
 
 model Order {
-  id          String      @id @default(uuid())
-  userId      String
-  user        User        @relation(fields: [userId], references: [id])
-  totalAmount Float
-  status      String
-  items       OrderItem[]
-  createdAt   DateTime    @default(now())
-  updatedAt   DateTime    @updatedAt
+  id                String      @id @default(uuid())
+  user              User        @relation(fields: [userId], references: [id])
+  userId            String
+  totalAmount       Float
+  discount          Float       @default(0)
+  couponCode        String? // save for reference
+  status            OrderStatus @default(PENDING)
+  createdAt         DateTime    @default(now())
+  orderItems        OrderItem[]
+  shippingAddress   Address?    @relation("ShippingAddress", fields: [shippingAddressId], references: [id])
+  shippingAddressId String?
+  billingAddress    Address?    @relation("BillingAddress", fields: [billingAddressId], references: [id])
+  billingAddressId  String?
+
+  updatedAt DateTime @updatedAt
+  Coupon    Coupon?  @relation(fields: [couponId], references: [id])
+  couponId  String?
 }
 
 model OrderItem {
@@ -133,4 +143,39 @@ enum OrderStatus {
   SHIPPED
   DELIVERED
   CANCELLED
+}
+
+model Address {
+  id             String      @id @default(uuid())
+  user           User        @relation(fields: [userId], references: [id])
+  userId         String
+  type           AddressType
+  fullName       String
+  phone          String
+  street         String
+  city           String
+  state          String
+  postalCode     String
+  country        String
+  isDefault      Boolean     @default(false)
+  shippingOrders Order[]     @relation("ShippingAddress")
+  billingOrders  Order[]     @relation("BillingAddress")
+  createdAt      DateTime    @default(now())
+  updatedAt      DateTime    @updatedAt
+}
+
+enum AddressType {
+  SHIPPING
+  BILLING
+}
+
+model Coupon {
+  id         String   @id @default(uuid())
+  code       String   @unique
+  discount   Int // fixed amount discount
+  expiryDate DateTime
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  orders Order[] // Relation to orders that used this coupon
 }

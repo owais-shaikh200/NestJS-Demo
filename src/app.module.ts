@@ -11,6 +11,8 @@ import { SubcategoryModule } from './subcategory/subcategory.module';
 import { ProductModule } from './product/product.module';
 import { CartModule } from './cart/cart.module';
 import { OrderModule } from './order/order.module';
+import { AddressModule } from './address/address.module';
+import { CouponModule } from './coupon/coupon.module';
 
 @Module({
   imports: 
@@ -25,7 +27,9 @@ import { OrderModule } from './order/order.module';
     SubcategoryModule,
     ProductModule,
     CartModule,
-    OrderModule
+    OrderModule,
+    AddressModule,
+    CouponModule
   ],
   controllers: [AppController],
   providers: [AppService],

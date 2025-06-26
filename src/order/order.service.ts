@@ -9,10 +9,14 @@ import { OrderStatus } from '@prisma/client';
 import { buildOrderFilter } from 'src/utils/filter.helper';
 import { buildOrderSearchFilter } from 'src/utils/search.helper';
 import { getOrderSortOption } from 'src/utils/sort.helper';
+import { CouponService } from '../coupon/coupon.service';
 
 @Injectable()
 export class OrderService {
-  constructor(private readonly prisma: PrismaService) {}
+  constructor(
+    private readonly prisma: PrismaService,
+    private readonly couponService: CouponService,
+  ) {}
 
   async placeOrder(userId: string, dto: CreateOrderDto) {
     const cart = await this.prisma.cart.findUnique({
@@ -24,17 +28,32 @@ export class OrderService {
       throw new NotFoundException('Cart is empty');
     }
 
-    const totalAmount = cart.items.reduce(
+    const subtotal = cart.items.reduce(
       (sum, item) => sum + item.price * item.quantity,
       0,
     );
+
+    let discount = 0;
+    let appliedCouponCode: string | null = null;
+
+    if (dto.couponCode) {
+      const coupon = await this.couponService.validateCoupon(dto.couponCode);
+      discount = coupon.discount;
+      appliedCouponCode = coupon.code;
+    }
+
+    const totalAmount = Math.max(subtotal - discount, 0);
 
     const order = await this.prisma.order.create({
       data: {
         userId,
         totalAmount,
+        discount,
+        couponCode: appliedCouponCode,
         status: 'PENDING',
-        items: {
+        shippingAddressId: dto.shippingAddressId,
+        billingAddressId: dto.billingAddressId,
+        orderItems: {
           create: cart.items.map((item) => ({
             productId: item.productId,
             quantity: item.quantity,
@@ -43,7 +62,9 @@ export class OrderService {
         },
       },
       include: {
-        items: true,
+        orderItems: true,
+        shippingAddress: true,
+        billingAddress: true
       },
     });
 
@@ -53,31 +74,40 @@ export class OrderService {
   }
 
   async getUserOrders(userId: string, page: number, limit: number, skip: number, take: number) {
-  const [orders, total] = await Promise.all([
-    this.prisma.order.findMany({
-      where: { userId },
-      include: { items: true },
-      orderBy: { createdAt: 'desc' },
-      skip,
-      take,
-    }),
-    this.prisma.order.count({ where: { userId } }),
-  ]);
+    const [orders, total] = await Promise.all([
+      this.prisma.order.findMany({
+        where: { userId },
+        include: { 
+        
+        orderItems: true, 
+        shippingAddress: true,
+        billingAddress: true 
+      },
+        orderBy: { createdAt: 'desc' },
+        skip,
+        take,
+      }),
+      this.prisma.order.count({ where: { userId } }),
+    ]);
 
-  return {
-    data: orders,
-    meta: {
-      total,
-      page,
-      lastPage: Math.ceil(total / limit),
-    },
-  };
-}
+    return {
+      data: orders,
+      meta: {
+        total,
+        page,
+        lastPage: Math.ceil(total / limit),
+      },
+    };
+  }
 
   async getOrderById(orderId: string, userId: string, role: string) {
     const order = await this.prisma.order.findUnique({
       where: { id: orderId },
-      include: { items: true },
+      include: { 
+        orderItems: true,
+        shippingAddress: true,
+        billingAddress: true 
+      },
     });
 
     if (!order) throw new NotFoundException('Order not found');
@@ -90,68 +120,71 @@ export class OrderService {
   }
 
   async getAllOrders(page: number, limit: number, skip: number, take: number) {
-  const [orders, total] = await Promise.all([
-    this.prisma.order.findMany({
-      include: { items: true, user: true },
-      orderBy: { createdAt: 'desc' },
-      skip,
-      take,
-    }),
-    this.prisma.order.count(),
-  ]);
+    const [orders, total] = await Promise.all([
+      this.prisma.order.findMany({
+        include: { 
+          orderItems: true,
+          user: true,
+          shippingAddress: true,
+          billingAddress: true 
+        },
+        orderBy: { createdAt: 'desc' },
+        skip,
+        take,
+      }),
+      this.prisma.order.count(),
+    ]);
 
-  return {
-    data: orders,
-    meta: {
-      total,
-      page,
-      lastPage: Math.ceil(total / limit),
-    },
-  };
-}
+    return {
+      data: orders,
+      meta: {
+        total,
+        page,
+        lastPage: Math.ceil(total / limit),
+      },
+    };
+  }
 
-async getAllOrdersWithQuery(params: {
-  page: number;
-  limit: number;
-  skip: number;
-  take: number;
-  search?: string;
-  status?: string;
-  sort?: string;
-}) {
-  const { page, limit, skip, take, search, status, sort } = params;
+  async getAllOrdersWithQuery(params: {
+    page: number;
+    limit: number;
+    skip: number;
+    take: number;
+    search?: string;
+    status?: string;
+    sort?: string;
+  }) {
+    const { page, limit, skip, take, search, status, sort } = params;
 
-  const baseFilter = buildOrderFilter({ status });
-  const searchFilter = buildOrderSearchFilter(search);
-  const orderBy = getOrderSortOption(sort);
+    const baseFilter = buildOrderFilter({ status });
+    const searchFilter = buildOrderSearchFilter(search);
+    const orderBy = getOrderSortOption(sort);
 
-  const where = {
-    ...baseFilter,
-    ...(searchFilter || {}),
-  };
+    const where = {
+      ...baseFilter,
+      ...(searchFilter || {}),
+    };
 
-  const [orders, total] = await Promise.all([
-    this.prisma.order.findMany({
-      where,
-      include: { items: true, user: true },
-      skip,
-      take,
-      orderBy,
-    }),
-    this.prisma.order.count({ where }),
-  ]);
+    const [orders, total] = await Promise.all([
+      this.prisma.order.findMany({
+        where,
+        include: { orderItems: true, user: true },
+        skip,
+        take,
+        orderBy,
+      }),
+      this.prisma.order.count({ where }),
+    ]);
 
-  return {
-    data: orders,
-    meta: {
-      total,
-      page,
-      lastPage: Math.ceil(total / limit),
-    },
-  };
-}
-
-
+    return {
+      data: orders,
+      meta: {
+        total,
+        page,
+        lastPage: Math.ceil(total / limit),
+      },
+    };
+  }
 
   async updateOrderStatus(orderId: string, status: string) {
     const order = await this.prisma.order.findUnique({ where: { id: orderId } });

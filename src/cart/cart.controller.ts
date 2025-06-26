@@ -13,6 +13,7 @@ import { Request } from 'express';
 import { CartService } from './cart.service';
 import { JwtAuthGuard } from '../auth/guards/jwt-auth.guard';
 import { AddToCartDto } from './dto/add-to-cart.dto';
+import { UpdateCartDto } from './dto/update-cart.dto';
 
 interface AuthRequest extends Request {
   user: {
@@ -42,10 +43,10 @@ export class CartController {
   updateQuantity(
     @Req() req: AuthRequest,
     @Param('itemId') itemId: string,
-    @Body('quantity') quantity: number,
+    @Body() dto: UpdateCartDto
   ) {
     const userId = req.user.id;
-    return this.cartService.updateCartItemQuantity(userId, itemId, quantity);
+    return this.cartService.updateCartItemQuantity(userId, itemId, dto.quantity);
   }
 
   @Delete('remove/:itemId')

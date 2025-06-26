@@ -1,4 +1,5 @@
 import {
+  IsUUID,
   IsArray,
   IsNotEmpty,
   IsNumber,
@@ -29,7 +30,14 @@ export class CreateOrderDto {
   @IsString()
   note?: string;
 
+  @IsUUID()
+  shippingAddressId: string;
+
+  @IsUUID()
+  billingAddressId: string;
+
   @IsOptional()
   @IsString()
-  shippingAddress?: string;
+  couponCode?: string;
+  
 }
