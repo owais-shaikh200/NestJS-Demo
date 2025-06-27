@@ -6,7 +6,6 @@ export class LoginDto {
   email: string;
 
   @IsNotEmpty()
-  @Exclude()
   password: string;
 
   constructor(partial: Partial<LoginDto>) {
