@@ -6,7 +6,7 @@ import {
 } from '@nestjs/common';
 import { PrismaService } from '../prisma/prisma.service';
 import { CreateOrderDto } from './dto/create-order.dto';
-import { OrderStatus } from '@prisma/client';
+import { AddressType, OrderStatus } from '@prisma/client';
 import { buildOrderFilter } from 'src/utils/filter.helper';
 import { buildOrderSearchFilter } from 'src/utils/search.helper';
 import { getOrderSortOption } from 'src/utils/sort.helper';
@@ -46,6 +46,29 @@ export class OrderService {
       }
     }
 
+    const [shippingAddress, billingAddress] = await Promise.all([
+      this.prisma.address.findFirst({
+        where: {
+          userId,
+          isDefault: true,
+          type: AddressType.SHIPPING,
+        },
+      }),
+      this.prisma.address.findFirst({
+        where: {
+          userId,
+          isDefault: true,
+          type:  AddressType.BILLING,
+        },
+      }),
+    ]);
+
+    if (!shippingAddress || !billingAddress) {
+      throw new BadRequestException(
+        'Default shipping or billing address not found',
+      );
+    }
+
     const subtotal = cart.items.reduce(
       (sum, item) => sum + item.price * item.quantity,
       0,
@@ -62,6 +85,7 @@ export class OrderService {
 
     const totalAmount = Math.max(subtotal - discount, 0);
 
+    // Step 4: Create order
     const order = await this.prisma.order.create({
       data: {
         userId,
@@ -69,8 +93,8 @@ export class OrderService {
         discount,
         couponCode: appliedCouponCode,
         status: 'PENDING',
-        shippingAddressId: dto.shippingAddressId,
-        billingAddressId: dto.billingAddressId,
+        shippingAddressId: shippingAddress.id,
+        billingAddressId: billingAddress.id,
         orderItems: {
           create: cart.items.map((item) => ({
             productId: item.productId,
@@ -86,7 +110,7 @@ export class OrderService {
       },
     });
 
-    // Step 2: Update stock and sales for each product
+    // Step 5: Update product stock and sales
     for (const item of cart.items) {
       await this.prisma.product.update({
         where: { id: item.productId },
@@ -97,12 +121,19 @@ export class OrderService {
       });
     }
 
+    // Step 6: Clear user's cart
     await this.prisma.cartItem.deleteMany({ where: { cartId: cart.id } });
 
     return order;
   }
 
-  async getUserOrders(userId: string, page: number, limit: number, skip: number, take: number) {
+  async getUserOrders(
+    userId: string,
+    page: number,
+    limit: number,
+    skip: number,
+    take: number,
+  ) {
     const [orders, total] = await Promise.all([
       this.prisma.order.findMany({
         where: { userId },
@@ -147,7 +178,12 @@ export class OrderService {
     return order;
   }
 
-  async getAllOrders(page: number, limit: number, skip: number, take: number) {
+  async getAllOrders(
+    page: number,
+    limit: number,
+    skip: number,
+    take: number,
+  ) {
     const [orders, total] = await Promise.all([
       this.prisma.order.findMany({
         include: {

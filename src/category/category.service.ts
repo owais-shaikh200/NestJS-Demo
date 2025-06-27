@@ -12,7 +12,7 @@ export class CategoryService {
       data: {
         name: dto.name,
         description: dto.description,
-        createdById: userId, // ✅ Only this is needed
+        createdById: userId,
       },
     });
   }
