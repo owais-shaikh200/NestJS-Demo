@@ -1,9 +1,9 @@
 import { IsEmail, IsNotEmpty, MinLength, IsEnum } from 'class-validator';
 import { Role } from '@prisma/client';
-import { Exclude } from 'class-transformer';
 
 export class SignupDto {
   @IsEmail()
+  @IsNotEmpty({ message: 'Email is required' })
   email: string;
 
   @IsNotEmpty()
