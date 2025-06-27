@@ -6,7 +6,6 @@ import {
   Body,
   Delete,
   UseGuards,
-  ParseIntPipe,
 } from '@nestjs/common';
 import { UserService } from './user.service';
 import { JwtAuthGuard } from '../auth/guards/jwt-auth.guard';
@@ -34,14 +33,14 @@ export class UserController {
 
   @UseGuards(JwtAuthGuard)
   @Get(':id')
-  findOne(@Param('id', ParseIntPipe) id: string) {
+  findOne(@Param('id') id: string) {
     return this.userService.findOne(id);
   }
 
   @UseGuards(JwtAuthGuard)
   @Patch(':id')
   update(
-    @Param('id', ParseIntPipe) id: string,
+    @Param('id') id: string,
     @Body() dto: UpdateUserDto,
   ) {
     return this.userService.update(id, dto);
@@ -49,7 +48,7 @@ export class UserController {
 
   @UseGuards(JwtAuthGuard)
   @Delete(':id')
-  remove(@Param('id', ParseIntPipe) id: string) {
+  remove(@Param('id') id: string) {
     return this.userService.remove(id);
   }
 }
