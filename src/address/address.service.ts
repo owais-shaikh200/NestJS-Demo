@@ -12,7 +12,6 @@ export class AddressService {
   constructor(private readonly prisma: PrismaService) {}
 
   async create(userId: string, dto: CreateAddressDto) {
-    // If user wants to set this address as default, unset previous
     if (dto.isDefault) {
       await this.prisma.address.updateMany({
         where: { userId, type: dto.type },
